@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myjob_ongoing_swipe_refresh_layout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#e5e6eb">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:id="@+id/myjobs_ongoing_main_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#e5e6eb"
+            android:visibility="gone">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/myjob_ongoing_swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ListView
+                    android:id="@+id/myjobs_ongoing_listView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:divider="#e5e6eb"
+                    android:dividerHeight="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/no_jobs_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#e1e1e1"
+            android:visibility="visible">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fillViewport="true">
+
+                <include
+                    android:id="@+id/myjob_ongoing_include"
+                    layout="@layout/myjobs_ongoing_emptyjobs_include_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </ScrollView>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/myjobs_ongoing_noInternet_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fillViewport="true">
+
+                <include
+                    android:id="@+id/myjobs_ongoing_nointernet_include"
+                    layout="@layout/no_internet_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </ScrollView>
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/myjobongoing_fragment_loadmoreprogress"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#ffffff"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:visibility="visible" />
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

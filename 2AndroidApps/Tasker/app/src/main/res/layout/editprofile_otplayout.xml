@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout">
+
+
+        <RelativeLayout
+            android:id="@+id/otp_label_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/job_otp_enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/edit_profile_otplayout_otp_here"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <core.Widgets.CustomEdittext
+                android:id="@+id/editmobilno_otp_Et"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/job_otp_enter"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="25dp"
+                android:background="@xml/custom_curv_layout_grey"
+                android:gravity="top|left"
+                android:hint="@string/edit_profile_otplayout_otp_hint"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:typeface="sans">
+
+            </core.Widgets.CustomEdittext>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/otp_label_layout"
+            android:layout_marginTop="8dp">
+            <core.Widgets.CustomButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbel_notification_ok"
+                android:id="@+id/otp_submit"
+
+                android:layout_alignParentEnd="true"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                />
+            <core.Widgets.CustomButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_complete_cancel"
+                android:id="@+id/otp_cancel"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:layout_alignParentLeft="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+

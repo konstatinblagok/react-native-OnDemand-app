@@ -1,0 +1,195 @@
+<!-- <div ng-if="currentState.name=='landing'" >
+  <section class="handy-home-footer"  style="background: url('uploads/images/homepage/footer-back.png');">
+       <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <img src="uploads\images\homepage\footer-logo.png" alt="footerlogo">
+        <ul class="social-icons">
+           <li ng-repeat="rc in rc.social" >
+            <a href={{rc.url}} ng-if="rc.name=='Facebook'" target="_blank"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href={{rc.url}} ng-if="rc.name=='Twitter'" target="_blank"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href={{rc.url}} ng-if="rc.name=='Google Plus'" target="_blank"> <i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            <a href={{rc.url}} ng-if="rc.name=='Youtube'" target="_blank"> <i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+         </li>
+        </ul>
+        <ul class="footer_links">
+          <li ng-repeat="data in rc.pages" ng-init="outerIndex = $index" >
+
+            <a  ng-repeat="pagename in data.categoryname"  href="page/{{pagename.slug}}"  >{{pagename.name}} <span ng-if="outerIndex < rc.pagescount-1"> &nbsp;&nbsp;&nbsp;| </span> </a>
+          </li>
+        </ul>
+
+        <p class="copyright">Copyright &copy; {{rc.copyrightYear | date:'yyyy'}} {{rc.getsetting.site_title}}. ALL right reserved.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    </section>
+  </div>  -->
+
+<!-- </section> -->
+
+
+<!-- <div  >
+
+<footer data-ng-hide="$state.includes('becometasker.step0')">
+    <section class="social_download">
+        <div class="hirecontainer">
+            <div class="container">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="footer_social">
+                            <a ng-repeat="rc in rc.social" href={{rc.url}} target="_blank"><img src="{{rc.img}}"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="footer_download">
+                            <a href={{rc.url}} ng-repeat="rc in rc.appstore" target="_blank"><img title="{{rc.name}}" src="{{rc.img}}"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <div class="container">
+
+            <div class="col-md-3" ng-repeat="data in rc.pages">
+                <span class="info"> {{data.settings.name}} </span>
+                <span class="info" ng-repeat="pagename in data.categoryname">
+                <a href='page/{{pagename.slug}}'>
+                    {{pagename.name}}
+                 </a>
+               </span>
+               <span class="info" ng-if="data.settings.name == 'COMPANY'"> <a ui-sref='contact_us'> Contact Us</a></span>
+               <span class="info" ng-if="data.settings.name != 'COMPANY'"> <a ui-sref='faq'> Faq  </a></span>
+            </div>
+            <div class="col-md-4 col-box3">
+                <select class="lang" ng-init="rc.setDefaultLanguage(rc.DefaultLanguage)" ng-model="rc.DefaultLanguage" ng-change="rc.setDefaultLanguage(rc.DefaultLanguage)">
+                  <option value="">--{{'SELECT' | translate}} --</option>
+                  <option ng-repeat="language in rc.language" ng-selected="rc.DefaultLanguage == language.name" value="{{language.name}}" ng-model="rc.DefaultLanguage">{{language.name}}</option>
+              </select>
+                <select class="currency lang" ng-model="rc.DefaultCurrency[0].name" ng-change="rc.setDefaultCurrency(rc.DefaultCurrency[0].name)">
+                  <option value="">--{{'SELECT' | translate}} --</option>
+                  <option  ng-repeat="currency in rc.Currency" ng-selected="rc.DefaultCurrency[0].name == currency.name" value="{{currency.name}}" ng-model="rc.DefaultCurrency[0].name" >{{currency.code}}</option>
+              </select>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>Copyright © {{rc.copyrightYear | date:'yyyy'}} {{rc.getsetting.site_title}}. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+ -->
+<div>
+  <script>
+    function opensidenav() {
+      $(".sidenav-wrap").css('left', '0');
+      $("body").addClass("sidenavoverlay");
+      $(".sidenav-wrap").addClass("active");
+      $(".navbar-toggle").addClass("collapsed");
+    }
+
+    function closesidenav() {
+      $(".sidenav-wrap").css('left', '-150%');
+      $("body").removeClass("sidenavoverlay");
+      $(".sidenav-wrap").removeClass("active");
+      $(".navbar-toggle").removeClass("collapsed");
+    }
+
+    $(document).ready(function () {
+
+      $(window).resize(function () {
+        if (($(window).width) > 990) {
+          $(".sidenav-wrap").css('left', '-150%');
+        }
+      });
+
+      $(window).on("scroll", function () {
+        var fromTop = $(document).scrollTop();
+        $('.handy-home-header .navbar').toggleClass("fixed", (fromTop > 100));
+        $('.handy-home-innerheader .handy-home-header .navbar').toggleClass("fixed", (fromTop >= 0));
+      });
+
+    });
+
+
+    $(document).on("click", function (e) {
+
+
+      if ($('.navbar-toggle:not(.collapsed)').is(e.target) || $('.navbar-toggle:not(.collapsed)').has(e.target).length != 0) {
+        opensidenav();
+      } else if (!$('.sidenav-wrap').is(e.target) || !$('.sidenav-wrap').has(e.target)) {
+        closesidenav();
+      }
+
+
+    });
+  </script>
+
+  <section class="handy-home handy-home-innerfooter">
+    <section class="handy-home-footer" style="background: url('uploads/images/homepage/footerbg.png');background-size: 96%;   background-repeat: no-repeat;
+    background-position: 50% 50%;">
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <a ui-sref="landing">
+                <img ui-sref="landing" style="width: auto; min-height: 40px; max-height: 40px;" src="{{rc.getsetting.logo}}" alt="footerlogo">
+              </a>
+              <ul class="social-icons">
+                <li ng-repeat="rc in rc.social" ng-if="rc.name=='Facebook' || rc.name=='Twitter' || rc.name=='Google Plus' || rc.name=='Youtube' ">
+                  <a href={{rc.url}} ng-if="rc.name=='Facebook'" target="_blank"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href={{rc.url}} ng-if="rc.name=='Twitter'" target="_blank"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  <a href={{rc.url}} ng-if="rc.name=='Google Plus'" target="_blank"> <i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                  <a href={{rc.url}} ng-if="rc.name=='Youtube'" target="_blank"> <i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+
+
+              <div class="handy-lang-section">
+                <select class="lang" ng-init="rc.setDefaultLanguage(rc.DefaultLanguage)" ng-model="rc.DefaultLanguage" ng-change="rc.setDefaultLanguage(rc.DefaultLanguage)">
+                  <option value="">--{{'SELECT' | translate}} --</option>
+                  <option ng-repeat="language in rc.language" ng-selected="rc.DefaultLanguage == language.name" value="{{language.name}}" ng-model="rc.DefaultLanguage">{{language.name}}</option>
+              </select>
+                <select class="currency lang" ng-model="rc.DefaultCurrency[0].name" ng-change="rc.setDefaultCurrency(rc.DefaultCurrency[0].name)">
+                  <option value="">--{{'SELECT' | translate}} --</option>
+                  <option  ng-repeat="currency in rc.Currency" ng-selected="rc.DefaultCurrency[0].name == currency.name" value="{{currency.name}}" ng-model="rc.DefaultCurrency[0].name" >{{currency.code}}</option>
+              </select>
+              </div>
+
+              <div class="app-section">
+                <ul class="app-main">
+                  <li ng-repeat="rc in rc.appstore">
+                    <a href={{rc.url}} ng-if="rc.name=='App Store'" target="_blank"><img src="uploads/images/homepage/app-store.png"> </a>
+                    <a href={{rc.url}} ng-if="rc.name=='Google Play'" target="_blank"><img src="uploads/images/homepage/google-app.png"> </a>
+                  </li>
+
+
+                </ul>
+              </div>
+              <ul class="footer_links">
+                <li ng-repeat="data in rc.pages" >
+                  <a ng-repeat="pagename in data.categoryname | filter:query as filtered" href="page/{{pagename.slug}}">
+					{{pagename.name}}
+					<span ng-init="total = (filtered.length - 1)"><span ng-if="$index < total" > | </span></span>
+				</a>
+                </li>
+              </ul>
+
+              <p class="copyright">{{'Copyright' | translate}} &copy; {{rc.copyrightYear | date:'yyyy'}} {{rc.getsetting.site_title}}. {{'All rights reserved' | translate}}.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+</div>

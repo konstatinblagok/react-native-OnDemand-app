@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_category_layout">
+
+
+        <RelativeLayout
+            android:id="@+id/dayrelative"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            >
+
+            <com.a2zkajuser.core.widgets.CustomTextView
+                android:id="@+id/days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mor"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Monday"
+                android:textColor="#8e8e8e"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/dayrelative"
+            android:id="@+id/avail_image">
+            <LinearLayout
+                android:id="@+id/day_session"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/availability"
+                android:weightSum="3"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/tick1"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:layout_weight="1.0"/>
+
+                <ImageView
+                    android:id="@+id/tick2"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:layout_weight="1.0"/>
+
+                <ImageView
+                    android:id="@+id/tick3"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:layout_weight="1.0"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

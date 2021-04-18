@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true">
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/layout_workflow_date_time"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_marginTop="5dp">
+
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/workflow_date_Tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:text=""
+                    android:textColor="#8e8e8e"
+                    android:textSize="14sp" />
+
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/workflow_time_Tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/workflow_date_Tv"
+                    android:layout_marginLeft="15dp"
+                    android:text=""
+                    android:textColor="#8e8e8e"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/workflow_checks_icon"
+                android:src="@drawable/workflow_uncheck"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/layout_workflow_date_time"
+                android:visibility="visible"/>
+
+
+
+            <View
+                android:layout_width="25dp"
+                android:layout_height="2px"
+                android:id="@+id/workflow_view1"
+                android:background="#f83a3a"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+               android:layout_toRightOf="@+id/workflow_checks_icon" />
+
+
+            <View
+                android:layout_width="2px"
+                android:layout_height="25dp"
+                android:id="@+id/workflow_view2"
+                android:background="#f83a3a"
+                android:layout_marginLeft="25dp"
+                android:layout_below="@+id/workflow_checks_icon"
+                android:layout_toRightOf="@+id/layout_workflow_date_time"/>
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/workflow_job_titleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="booked"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="3dp"
+               android:layout_toRightOf="@+id/workflow_view1"/>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/handyexpertslogo"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="30dp"
+            android:id="@+id/logo_image"
+            android:layout_marginLeft="25dp"/>
+        <core.Widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/logo_image"
+            android:text="User Send the Message"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="15sp"
+            android:id="@+id/title"/>
+        <core.Widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_below="@+id/title"
+            android:layout_toRightOf="@+id/logo_image"
+            android:layout_marginLeft="15dp"
+            android:text="Message"
+            android:layout_marginTop="10dp"
+            android:id="@+id/text"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/logo_image"
+            android:layout_marginTop="6dp"
+            android:background="#9b9b9b"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/view"></View>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="25dp"
+            android:id="@+id/reply"
+            android:src="@drawable/reply_icon"/>
+        <core.Widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_toRightOf="@+id/reply"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="7dp"
+            android:text="@string/customer_notification_replay"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

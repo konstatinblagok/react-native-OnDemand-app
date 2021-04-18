@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/chat_list_item_profile_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <core.Widgets.CircularImageView
+            android:id="@+id/chat_list_profile_icon"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/description"
+            android:src="@drawable/nouserimg"
+            app:border="true"
+            app:border_color="#fb71ac"
+            app:border_width="4dp"
+            app:shadow="true" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/chat_list_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/chat_list_profile_icon"
+            android:text="Ani"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/chat_list_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chat_list_username"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/chat_list_profile_icon"
+            android:text="hai hw ru ?"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/chatlist_messagetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/chat_list_username"
+            android:layout_marginRight="15dp"
+            android:text="10am"
+            android:textColor="#8e8e8e"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

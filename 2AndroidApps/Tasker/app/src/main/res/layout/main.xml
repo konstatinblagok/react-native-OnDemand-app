@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_backgroundlayout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/mainpage_image"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/handy_splash1"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/view_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_above="@+id/main_LAY_button"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@android:color/white" />
+
+            <LinearLayout
+                android:id="@+id/main_LAY_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/main_login_facebook"
+                android:layout_alignParentBottom="true"
+                android:background="#00000000"
+                android:weightSum="2">
+
+                <com.andexert.library.RippleView
+                    android:id="@+id/main_RPL_signin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:rv_centered="false"
+                    app:rv_color="@android:color/white"
+                    app:rv_rippleDuration="380"
+                    app:rv_type="rectangle">
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/Login_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="@string/mainpage_login_textview_lable"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+                </com.andexert.library.RippleView>
+
+                <View
+                    android:id="@+id/viewStub"
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/white" />
+
+                <com.andexert.library.RippleView
+                    android:id="@+id/main_RPL_register"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:rv_centered="false"
+                    app:rv_color="@android:color/white"
+                    app:rv_rippleDuration="380"
+                    app:rv_type="rectangle">
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/signup_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="@string/mainpage_signup_textview_lable"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+                </com.andexert.library.RippleView>
+            </LinearLayout>
+
+
+            <core.Widgets.CustomButton
+                android:id="@+id/main_login_facebook"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/facebook_curve_background"
+                android:text="@string/loginpage_facebook_textview_lable"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+                android:id="@+id/main_page_VWPGR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/main_page_VWPGR_indicator"
+                android:layout_marginTop="50dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
+                android:visibility="gone"
+                app:ms_background_color="@color/appmain_color" />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/main_page_VWPGR_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_above="@+id/main_LAY_button"
+                android:layout_marginBottom="6dp" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="220dp"
+                android:layout_height="260dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/cleaner"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

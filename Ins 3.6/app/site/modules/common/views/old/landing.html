@@ -1,0 +1,459 @@
+
+<section id="banner" class="handy-home-banner" data-type="background" data-speed="15" style="background-image:url('uploads/images/homepage/banner.jpg');">
+        <div class="container">
+             <div class="banner-content">
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <h2 class="main-title">WE FIND SERVICES FOR YOU</h2>
+                  <h5 class="sub-title">Help around the home is just a few clicks away</h5>
+                </div>
+                <div class="col-sm-12">
+                  <div class="search-wrap">
+                    <div class="search-wrap-inner">
+                     <form name="searchform" class="frm-fields" submit-validate role="form" novalidate>
+                     <div class="main-cat-search" ng-class="{ 'has-error' : searchform.searchfield.$invalid && !searchform.searchfield.$pristine, 'has-success' : searchform.searchfield.$valid && !searchform.searchfield.$pristine}">
+                    <ui-select name="parent" ng-model="searchData.parent" theme="selectize" on-select="MAC.getsubcategory(searchData.parent._id)"
+                        class="" title="Choose a Category">
+                        <ui-select-match placeholder="{{'CHOOSE A CATEGORY' | translate}}">{{$select.selected.name}}</ui-select-match>
+                        <ui-select-choices repeat="item in MAC.data.response[4].Category | filter: $select.search">
+                            <div ng-bind-html="item.name | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                   </div>
+                   <div class="sub-cat-search">
+                    <ui-select name="child" ng-model="searchData.child" theme="selectize" class="" title="Choose a Subcategory">
+                        <ui-select-match placeholder="{{'CHOOSE A SUBCATEGORY' | translate}}">{{$select.selected.name}}</ui-select-match>
+                        <ui-select-choices repeat="item1 in MAC.subcategorydata | filter: $select.search">
+                            <div ng-bind-html="item1.name | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+
+                <div class="btn-search">
+                    <button type="submit" class="btn btn-block" ng-click="search(searchData)">{{'SEARCH' | translate}}</button>
+                 </div>
+
+                     <!-- <div class="main-cat-search">
+                        <input ng-model="firstName" type="text" placeholder="Choose a category" class="form-control"></input>
+                      </div>
+
+                     <div class="sub-cat-search">
+                        <input type="text" placeholder="Choose a sub category" class="form-control"></input>
+                      </div>
+                      <div class="btn-search">
+                        <a class="btn btn-block">Search</a>
+                      </div>  -->
+                </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="handy-home-overview">
+        <div class="container">
+         <div class="handy-home-overview-inner">
+          <div class="row">
+
+                <div class="col-sm-4" ng-repeat="postheader in MAC.postheader">
+                  <img src="{{postheader.image}}">
+                  <h2 class="main-title">Describe Your Task</h2>
+                  <p class="sub-title">This helps us determine which Taskers are best for your job.</p>
+                </div>
+          </div>
+          <div class="row">
+                <div class="col-sm-12">
+                  <a  ui-sref="morecategories({slug:0})" class="btn btn-post-task">Post a Task Here!</a>
+                  <p class="sub-title">It's FREE to post a task online. </p>
+                </div>
+          </div>
+         </div>
+        </div>
+    </section>
+
+    <section class="handy-home-testimonials" data-type="background" data-speed="7" style="background-image:url('images/homepage/parallax.jpg');">
+        <div class="container">
+          <div class="row">
+                <div class="col-sm-12">
+                  <h2 class="section-title">What People Are Saying</h2>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+            <slick dots="false" infinite="true" speed="300" init-onload=true data="MAC.peoplecomment"  slides-to-show="2" touch-move="false" slides-to-scroll="1">
+                <div class="testimonials-wrap" ng-repeat="people in MAC.peoplecomment"  >
+                  <img class="author-image" src="{{people.image}}">
+               <div class="testimonials-content" >
+                  <p class="">{{people.description}}
+                  </p>
+                  <h3 class="author-name">{{people.name}}<span class="highlight">{{people.profession}}</span></h3>
+                </div>
+                </div>
+            </slick>
+          </div>
+
+          </div>
+        </div>
+    </section>
+
+  <!-- shop-ads -->
+<!--OUR TOP BRANDS Starts -->
+<!-- <section class="sec_border" ng-controller="SlickController">
+    <div class="container cont_border">
+        <div class="pro-lists brand-logo">
+            <h2 class="content-title"><b>OUR TOP BRANDS</b></h2>
+            <slick class="slider" settings="slickbrand" >
+            <div class="testimonials-wrap" ng-repeat="people in MAC.peoplecomment" >
+          <img class="author-image" src="uploads/images/homepage/testimonial1.png">
+         <div class="testimonials-content">
+          <p class="">Lorem ipsum dolor sit amet, sit pellentesque pellentesque ultrices, et egestas eu, nascetur justo, urna rutrum    dignissim malesuada, purus risus. Odio vulputate. Eget sapiente sit, nibh eget odio iaculis risus.
+          </p>
+          <h3 class="author-name">BENJAMIN HENDERSON /{{firstName}} <span class="highlight">BUSINESSMAN, NY</span></h3>
+         </div>
+        </div>
+
+      </slick>
+        </div>
+    </div>
+</section> -->
+<!--OUR TOP BRANDS Ends -->
+<!--On Sale Now Starts-->
+  <section class="handy-home-payment">
+    <div class="container">
+      <div class="row">
+           <div class="col-sm-12 payment-heading">
+          <h2 class="section-title">{{'Payment and Pricing' | translate}}</h2>
+        </div>
+        <div class="col-md-4 col-sm-4" ng-repeat="payment in MAC.paymentprice" >
+          <div class="payment-method">
+            <img src="{{payment.image}}" alt="payment icons">
+          <h4>{{payment.seo.title}}</h4>
+          <p>{{payment.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section class="handy-home-gallery">
+    <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+           <h2 class="section-title">{{'Newsletter Subscription' | translate}}</h2>
+         </div>
+         <div class="cvr-dv col-md-12">
+         <div class="col-md-4 col-sm-4" ng-repeat="categoryinfo in MAC.data.response[0].ActiveCategory">
+           <div class="pro1 sdsd">
+            <div class="pro-pict">
+             <a ui-sref="category({slug:categoryinfo.slug})" href="category({slug:categoryinfo.slug})">
+             <img  ng-if="categoryinfo.image !=''" src="{{categoryinfo.image}}" alt="{{categoryinfo.name}}">
+             <img  ng-if="categoryinfo.image ==''" src="uploads/images/homepage/gallery1.png" alt="{{categoryinfo.name}}">
+             </a>
+            </div>
+         </div>
+         </div>
+         </div>
+
+         <div class="text-center" >
+           <button type="button" ng-if="MAC.data.response[4].Category.length>6" ui-sref="morecategories({slug:0})" class="btn btn-default view-more ">{{'View More' | translate}}</button>
+         </div>
+      </div>
+    </div>
+    </section>
+
+     <section class="handy-home-newsletter">
+    <div class="container">
+      <div class="row">
+           <div class="col-sm-12">
+          <div class="sub-section">
+          <h2 class="section-title">{{'Newsletter Subscription' | translate}}</h2>
+          <p>Subscribe to our newsletter to get all updates, news and events from Handyforall.</p>
+          <div class="sub-email">
+             <form name="subscriptionForm" submit-validate role="form" enctype="multipart/form-data" novalidate>
+          <div class="group-control">
+           <input name="email" id="email" ng-pattern="/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/" ng-model="MAC.email" placeholder="{{'Enter your email address' | translate}}" required type="text" class="form-control">
+           <div class="text-center">
+           <button type="button" ng-click="MAC.subscription(subscriptionForm,MAC.email)" class="btn btn-default subscribes">{{'Subscribe' | translate}}</button>
+                   </div>
+          </div>
+           </form>
+          </div>
+          </div>
+          <div class="app-section">
+            <ul class="app-main">
+              <li  ng-repeat="rc in rc.appstore" >
+                <a href={{rc.url}} ng-if="rc.name=='App Store'"  target="_blank"><img src="uploads/images/homepage/app-store.png">   </a>
+                 <a href={{rc.url}} ng-if="rc.name=='Google Play'"  target="_blank"><img src="uploads/images/homepage/google-app.png">   </a>
+              </li>
+
+
+           </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section class="handy-home-address">
+    <div class="container">
+      <div class="row">
+           <div class="col-sm-12">
+          <h2 class="section-title">{{rc.getsetting.location}}</h2>
+          <!-- <div class="map location">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.659221783588!2d80.25115571482287!3d13.057350190799706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526640756150db%3A0x679c65a5186aac8c!2sCasperon!5e0!3m2!1sen!2sin!4v1503900246209" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div> -->
+           <div class="map location" ng-if="rc.getsetting.location">
+            <!-- style="width:600px; height:400px" -->
+             <ng-map id="map" zoom="15" center="[40.74, -74.18]" zoom="2">
+             <marker position="{{rc.getsetting.location}}" title="{{rc.getsetting.location}}" animation="Animation.BOUNCE" centered="true"></marker>
+             <!-- <marker position="Brampton Canada" title="Brampton Canada"></marker> -->
+            </ng-map>
+           </div>
+        </div>
+      </div>
+
+    </div>
+    </section>
+
+
+
+
+
+<!--
+
+<section class="section-white land-slide">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <uib-carousel interval="MAC.myInterval">
+                <uib-slide ng-repeat="slide in MAC.banner" active="slide.active">
+                    <img ng-src="{{slide.image}}" style="margin:auto;">
+                    <div class="carousel-caption">
+                        <p><strong>{{slide.description}}</strong></p>
+                    </div>
+                </uib-slide>
+            </uib-carousel>
+         </div>
+   </div>
+
+<div class="forms-holer home">
+    <div class="container">
+        <div class="main-text search-bar">
+            <form name="searchform" class="frm-fields" submit-validate role="form" novalidate>
+                <div class="col-md-5 srch-box cat-lists" ng-class="{ 'has-error' : searchform.searchfield.$invalid && !searchform.searchfield.$pristine, 'has-success' : searchform.searchfield.$valid && !searchform.searchfield.$pristine}">
+                    <ui-select name="parent" ng-model="searchData.parent" theme="selectize" on-select="MAC.getsubcategory(searchData.parent._id)"
+                        class="form-control" title="Choose a Category">
+                        <ui-select-match placeholder="{{'CHOOSE A CATEGORY' | translate}}">{{$select.selected.name}}</ui-select-match>
+                        <ui-select-choices repeat="item in MAC.data.response[4].Category | filter: $select.search">
+                            <div ng-bind-html="item.name | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+                <div class="col-md-5 srch-box sec-hlp">
+                    <ui-select name="child" ng-model="searchData.child" theme="selectize" class="form-control" title="Choose a Subcategory">
+                        <ui-select-match placeholder="{{'CHOOSE A SUBCATEGORY' | translate}}">{{$select.selected.name}}</ui-select-match>
+                        <ui-select-choices repeat="item1 in MAC.subcategorydata | filter: $select.search">
+                            <div ng-bind-html="item1.name | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+                <div class="col-md-2 srch-box">
+                    <button type="submit" ng-click="search(searchData)">{{'SEARCH' | translate}}<i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+            </form>
+
+            <span class="shadow"></span>
+        </div>
+    </div>
+</div>
+</section>
+
+<section>
+    <div class="how-it-works-section">
+        <div class="container">
+            <span class="totp-tile">{{'HOW' | translate}} {{MAC.data.response[2].Settings.settings.site_title}} {{'WORKS' | translate}}</span>
+
+            <ul class="how-itsworks">
+                <li class="col-md-4" ng-repeat="postheader in MAC.postheader">
+                    <div class="worksteps-holder">
+                        <figure><img src="{{postheader.image}}"></figure>
+                        <span class="sml-titl">{{postheader.title}}</span>
+                        <p class="descrb">{{postheader.description}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="how-it-works-section">
+        <div class="container">
+            <span class="totp-tile">{{'Payment and Pricing' | translate}} </span>
+
+            <ul class="how-itsworks">
+                <li class="col-md-4" ng-repeat="payment in MAC.paymentprice">
+                    <div class="worksteps-holder">
+                        <figure><img src="{{payment.image}}"></figure>
+                        <span class="sml-titl">{{payment.seo.title}}</span>
+                        <p class="descrb">{{payment.description}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="hirecontainer serives-sec">
+        <div class="container">
+            <span class="top-text-til">{{'HIRE FOR A RANGE' | translate}}</span>
+            <ul class="hireloop">
+                <li class="col-md-3" ng-repeat="categoryinfo in MAC.data.response[0].ActiveCategory">
+                    <div class="prodt-container">
+                        <a ui-sref="category({slug:categoryinfo.slug})" href="category({slug:categoryinfo.slug})">
+                            <figure>
+                                <div afkl-lazy-image="{{categoryinfo.image}}" class="afkl-lazy-wrapper" lazyerr></div>
+                                <div class="mask"></div>
+                            </figure>
+                            <figcaption>
+                                <h4 class="futer-text">{{categoryinfo.name}}</h4>
+                            </figcaption>
+                        </a>
+
+                    </div>
+                </li>
+                <button ng-if="MAC.data.response[4].Category.length>9" class="btn btn-success btn-ef btn-ef-3 btn-ef-3c mb-10" ui-sref="morecategories({slug:MAC.data.response[0].ActiveCategory.length})">More Categories</button>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="email-notify">
+    <div class="hirecontainer">
+        <div class="container">
+            <form name="subscriptionForm" submit-validate role="form" enctype="multipart/form-data" novalidate>
+                <div class="form-group" ng-class="{ 'has-error' : subscriptionForm.email.$invalid && !subscriptionForm.email.$pristine, 'has-success' : subscriptionForm.email.$valid && !subscriptionForm.email.$pristine}">
+                    <label for="email">{{'SUBSCRIPTION' | translate}}</label>
+                    <input type="email" name="email" id="email" class="form-control" ng-model="MAC.email" placeholder="{{'EMAIL ADDRESS '| translate}}"
+                        required>
+                    <button class="btn btn-success btn-ef btn-ef-3 btn-ef-3c mb-10" ng-click="MAC.subscription(subscriptionForm,MAC.email)">{{'SUBSCRIBE' | translate}}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section> -->
+
+
+<script>
+
+var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+
+
+$("#banner").css({"height":h});
+
+$(window).resize(function(){
+var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+$("#banner").css({"height":h});
+});
+
+$(window).on("scroll", function() {
+    var fromTop = $("body").scrollTop();
+    $('.handy-home-header .navbar').toggleClass("fixed", (fromTop > 100));
+    });
+
+// makes the parallax elements
+function parallaxIt() {
+  // create variables
+  var $fwindow = $(window);
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  var $contents = [];
+  var $backgrounds = [];
+
+  // for each of content parallax element
+  $('[data-type="content"]').each(function(index, e) {
+    var $contentObj = $(this);
+
+    $contentObj.__speed = $contentObj.data("speed") || 1;
+    $contentObj.__fgOffset = $contentObj.offset().top;
+    $contents.push($contentObj);
+  });
+
+  // for each of background parallax element
+  $('[data-type="background"]').each(function() {
+    var $backgroundObj = $(this);
+
+    $backgroundObj.__speed = $backgroundObj.data("speed") || 1;
+    $backgroundObj.__fgOffset = $backgroundObj.offset().top;
+    $backgrounds.push($backgroundObj);
+  });
+
+  // update positions
+  $fwindow.on("scroll resize", function() {
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    $contents.forEach(function($contentObj) {
+      var yPos = $contentObj.__fgOffset - scrollTop / $contentObj.__speed;
+
+      $contentObj.css("top", yPos);
+    });
+
+    $backgrounds.forEach(function($backgroundObj) {
+      var yPos = -(
+        (scrollTop - $backgroundObj.__fgOffset) /
+        $backgroundObj.__speed
+      );
+
+      $backgroundObj.css({
+        backgroundPosition: "50% " + (yPos * 2.5) +  "px"
+      });
+    });
+  });
+
+  // triggers winodw scroll for refresh
+  $fwindow.trigger("scroll");
+}
+
+parallaxIt();
+
+</script>
+
+<script>
+
+var app = angular.module("myApp", ['slick']);
+
+app.controller("myCtrl", function($scope) {
+
+
+});
+
+</script>
+
+<style type="text/css">
+
+.123{
+  float:left;
+  width:100%;
+  display: inline-block;
+}
+.123 a{
+  float:left;
+  width:100%;
+  display: inline-block;
+}
+.123 a img{
+  float:left;
+  width:100%;
+  display: inline-block;
+}
+</style>

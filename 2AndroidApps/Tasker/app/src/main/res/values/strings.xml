@@ -1,0 +1,594 @@
+<resources>
+    <string name="app_name">A2zkaj for All Experts</string>
+    <string name="description">Description</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="app_splace_name">A2zkaj</string>
+    <string name="app_splace_experts">Experts</string>
+
+    <!--Alert-->
+    <string name="server_lable_header">Sorry!</string>
+    <string name="server_ok_lable_header">Ok</string>
+    <string name="action_ok">OK</string>
+    <string name="lbel_alert_inform_msg">A2zkaj For All Partner</string>
+    <string name="lbel_alert_inform2_msg">Please visit our website to register.Thank you</string>
+    <string name="action_loadings_sucess">Success</string>
+    <string name="action_loading">Loading..</string>
+    <string name="no_inetnet_label">you are offline.please check your mobile data or Wifi connection</string>
+    <string name="no_inetnet_whoops_label">Whoops! Check Connection</string>
+    <string name="lbel_notification">Message</string>
+    <string name="lbel_notification_ok">Ok</string>
+    <string name="label_sure_go_offline">Are you sure you want go offline?</string>
+    <string name="label_pushnotification_canceled">Sorry</string>
+    <string name="label_pushnotification_ride_completed">Thanks</string>
+    <string name="label_pushnotification_cashreceived">Success</string>
+    <string name="label_pushnotification_newjob">New Job</string>
+    <string name="label_pushnotification_admin_changed_your_availability">Admin Changed Your Availability</string>
+    <string name="label_pushnotification_your_ride_has_been_completed">your ride has been completed</string>
+    <string name="action_sorry">Sorry</string>
+    <string name="admin_notification">Admin Notification</string>
+    <string name="availability_change">Admin Changed Your Availability</string>
+    <string name="partially_change">Payment</string>
+    <!--Loginpage-->
+    <string name="loginpage_edittext_lable_email_hint">Phone or Email</string>
+    <string name="loginpage_edittext_lable_password_hint">Password</string>
+    <string name="loginpage_textview_lable">Login</string>
+    <string name="loginpage_facebook_textview_lable">Login with facebook</string>
+    <string name="mainpage_login_textview_lable">Sign In</string>
+    <string name="mainpage_signup_textview_lable">Register</string>
+    <string name="loginpage_signup_textview_lable">SignUp</string>
+    <string name="loginpage_here_textview_lable">here</string>
+    <string name="mainpage_logineithemail_textview_lable">SIGN IN</string>
+    <string name="mainpage_logineithemail_textview_success_lable">Logged in sucessfully</string>
+    <string name="loginpage_edittext_lable_notaccouvt_Textview">Not one of us yet? </string>
+    <string name="mainpage_logineithemail_validate_lable">Phone or Email can\'t be empty</string>
+    <string name="mainpage_login_password_validate_lable">Password can\'t be empty</string>
+    <string name="mainpage_login_signin_lable">signIn</string>
+
+    <string name="action_no_internet_title">No Internet!</string>
+    <string name="action_no_internet_swipe_down">Swipe Down To Refresh</string>
+    <string name="action_no_internet_message">You are offline please check your internet connection</string>
+
+    <!--Navigation List-->
+    <string name="drawer_list_home_label">Home</string>
+    <string name="drawer_list_myjobs_label">My Jobs</string>
+    <string name="drawer_list_profile_label">My Profile</string>
+    <string name="drawer_list_chat_label">Chat</string>
+    <string name="drawer_list_banking_label">Account Details</string>
+    <string name="drawer_list_signout_label">Log Out</string>
+    <string name="drawer_list_changepassword_label">Change Password</string>
+    <string name="aboutus">About Us</string>
+    <string name="UserName">UserName</string>
+    <string name="navigation_label_transactions">Transactions</string>
+    <string name="navigation_label_notification">Notifications</string>
+    <string name="navigation_label_review">Reviews</string>
+
+    <string name="activity_label_review_images">Review Image</string>
+
+    <string name="activity_navigation_menu_label_no_notifications_found">Currently no notifications found</string>
+    <string name="activity_navigation_menu_label_no_reviews_found">Currently no reviews found</string>
+    <string name="activity_navigation_menu_label_no_transaction_found">Currently no transaction found</string>
+    <string name="activity_navigation_menu_label_no_messages_found">Currently no messages found</string>
+
+    <!--Chat Page -->
+    <string name="chat_page_label_online">Online</string>
+    <string name="chat_page_label_offline">Offline</string>
+    <string name="chat_page_label_typing">typing...</string>
+    <string name="chat_page_label_typing_without_dots">typing</string>
+    <string name="chat_page_label_message_cannot_send">Can\'t send message right now,the user is in offline</string>
+    <string name="chat_page_label_server_error">Failed to connect to server.Try again later.</string>
+    <string name="warning">This chat room is for A2zkajForAll business discussion only. Any use other than the primary purpose is prohibited.Tap for more info</string>
+    <string name="warning1">This chat room is for A2zkajForAll business discussion only. Any use other than the primary purpose is prohibited. Especially sending adverts, sexual content or abuse of the other party right. Admin goes through all chat content and attachments at all time. Defaulter are punishable under Indian Law.</string>
+
+    <string name="chat_message_service_chat_user">Chat message from user</string>
+
+    <!--Service Request-->
+    <string name="service_request_unable_fetch_data">Unable to fetch data from server</string>
+    <string name="service_request_auth_failure_error">AuthFailureError</string>
+    <string name="service_request_server_error">ServerError</string>
+    <string name="service_request_no_internet">No Internet Connection</string>
+    <string name="service_request_parse_error">ParseError</string>
+
+    <!--Loadings-->
+    <string name="logging_in">Logging in..</string>
+    <string name="loading_in">Loading..</string>
+    <string name="alert_label_title">Sorry!</string>
+    <string name="alert_nointernet">No Internet Connection</string>
+    <string name="alert_servererror">Error</string>
+    <string name="dialog_rating">Rating..</string>
+    <string name="dialog_cancelling">Cancelling</string>
+    <string name="action_gettinginfo">Getting info..</string>
+    <string name="action_saving">Saving..</string>
+    <string name="action_updating">Updating..</string>
+    <string name="splash_updating">Location Updating..</string>
+
+
+    <!--hints-->
+    <string name="job_summery">Job Summary</string>
+
+    <!--Logout-->
+
+    <string name="action_logging_out">Signing Out</string>
+
+    <!--Plumbal home-->
+    <string name="plumbal_home_label">home_newleads_header_label</string>
+    <string name="plumbal_myjobs_label">My jobs</string>
+    <string name="plumbal_statistes_label">Statistics</string>
+    <string name="plumbal_support_label">Support</string>
+
+    <string name="statistes_page_header_earnings_stats">Earnings Stats</string>
+    <string name="statistes_page_header_job_stats">Job Stats</string>
+
+    <!--Header Views-->
+    <string name="home_header_label">a2zkaj</string>
+    <string name="home_my_jobs_header_label">MY JOBS</string>
+    <string name="home_my_jobsdetail_header_label">JOB</string>
+    <string name="home_newleads_header_label">New Leads</string>
+    <string name="home_location_header_label">LOCATION</string>
+    <string name="home_cancelreason_header_label">CANCEL JOB</string>
+    <string name="moreinfo">More Info</string>
+
+    <string name="myjob_filter">FILTER</string>
+
+    <!--MyJobs-->
+    <string name="jobs_header_notavailable_label">Jobs not available</string>
+    <string name="jobs_orderid_label">Job Id :</string>
+    <string name="jobs_notavailable_label">You have 0 credits left.please recharge</string>
+    <string name="jobs_notavailable_info_label">You dont have any leads as your profile is not live In order to go live,your category needs to be listed and profile needs to be complete.To enquire about approval status send email to a2zkaj.com</string>
+    <string name="jobs_notavailable_tip_header_label">Tip:</string>
+    <string name="jobs_notavailable_tipdetail_label">Always keep your profile up to date to benefit most out of a2zkaj For All Partner</string>
+    <string name="jobs_notavailable_gotoprofile_label">Click here to edit your profile</string>
+    <string name="jobs_ongoing_jobs_notavailable_label">You Do Not Have Any Open Jobs</string>
+    <string name="jobs_converted_jobs_notavailable_label">You Do Not Have Any Completed Jobs</string>
+    <string name="jobs_cancelled_jobs_notavailable_label">You Do Not Have Any Cancelled Jobs</string>
+
+
+    <string name="aboutus_lable_header_textview">ABOUT US</string>
+    <string name="aboutus_lable_poweredby_textview">POWERED BY :</string>
+    <string name="aboutus_lable_company_textview">A2zkaj For All</string>
+    <string name="aboutus_lable_version_code_textview">V1.5</string>
+    <string name="aboutus_lable_moreinfo_textview">More Info</string>
+
+    <string name="aboutus_lable_aboutus_description_textview">A2zkaj For All - Refer Website..</string>
+
+    <!--Sorting layout-->
+    <string name="sorting_layout_TXT_lable_sorting">Sorting</string>
+    <string name="sorting_layout_TXT_lable_name">Name</string>
+    <string name="sorting_layout_TXT_lable_date">Date</string>
+    <string name="sorting_layout_TXT_lable_from">From</string>
+    <string name="sorting_layout_TXT_lable_to">To</string>
+    <string name="sorting_layout_TXT_lable_OrderBy">OrderBy</string>
+    <string name="sorting_layout_TXT_lable_Ascending">Ascending</string>
+    <string name="sorting_layout_TXT_lable_Descending">Descending</string>
+    <string name="sorting_layout_TXT_lable_Filter_by">Filter By</string>
+    <string name="sorting_layout_TXT_lable_Todays_Booking">Today\'s Booking</string>
+    <string name="sorting_layout_TXT_lable_Recent_Booking">Recent Booking</string>
+    <string name="sorting_layout_TXT_lable_Upcoming_Booking">Upcoming Booking</string>
+    <string name="sorting_layout_TXT_lable_Apply">Apply</string>
+
+
+    <!--OngoingDetail-->
+    <string name="ongoing_detail_date_label">Date :</string>
+    <string name="ongoing_detail_time_label">Time :</string>
+    <string name="ongoing_detail_more_label">More Info</string>
+    <string name="ongoing_detail_cancel_label">Cancel Reason</string>
+    <string name="ongoing_detail_canceled_job_label">Job Cancelled</string>
+    <string name="ongoing_detail_payment_label">Payment</string>
+    <string name="ongoing_detail_jobcompleted_label">Complete Job</string>
+    <string name="ongoing_detail_cancelbtn_label">Cancel</string>
+    <string name="ongoing_detail_startjob_label">Start job</string>
+    <string name="ongoing_detail_arrived_label">Arrived</string>
+    <string name="ongoing_detail_startoff_label">Start Off</string>
+    <string name="ongoing_detail_accept_label">Accept</string>
+    <string name="ongoing_detail_rejectlabel">Reject</string>
+    <string name="ongoing_detail_contact">Contact</string>
+    <string name="ongoing_detail_chat">Chat</string>
+    <string name="ongoing_detail_email">Email</string>
+    <string name="ongoing_detail_viewon_maplabel">View on Map</string>
+    <string name="ongoing_detail_map_doesnotcreate_label">Sorry! unable to create maps</string>
+    <string name="arrived_alert_content1">Unable to contact user.please try again after sometime</string>
+    <string name="on_state">Online</string>
+    <string name="off_state">Offline</string>
+    <string name="image_chooser">File Chooser</string>
+
+    <string name="ongoing_detail_shar_text">A2zkaj For All Partner App allows you to interact with users</string>
+    <string name="ongoing_detail_subject">A2zkaj For All Partner</string>
+    <string name="ongoing_detail_text">A2zkaj For All Partner App allows you to interact with users</string>
+
+    <string name="ongoing_detail_toolname">Please Enter the Toolname</string>
+    <string name="ongoing_detail_toolcost">Please Enter the Cost</string>
+
+    <!--Cancel-->
+    <string name="cancel_reasonlabel">No Reasons </string>
+    <string name="confirmdelete">Confirm Cancel</string>
+    <string name="surewanttodelete">Are you sure you want to cancel the job?</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="action_loading_sucess">Success</string>
+    <string name="action_loading_cancel">Cancelling</string>
+
+
+    <!--floatings button testing-->
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur magna tortor, semper eu feugiat eu, vehicula vitae lacus.</string>
+    <string name="recyclerview_fab_example">RecyclerView FAB example</string>
+    <string name="floating_action_menu">Floating Action Menu</string>
+    <string name="lorem_ipsum_large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed ultricies risus. Integer nisi orci, lacinia sit amet mi in, mollis scelerisque purus. Nunc risus ligula, maximus eu orci a, facilisis dictum velit. Proin nec laoreet magna. Nulla ut sagittis lorem. Morbi id enim fermentum, semper diam et, tempus leo. Aliquam vel congue orci. Suspendisse potenti. Curabitur finibus diam augue, vel bibendum sapien ultrices non.</string>
+
+
+    <!--Complet Job-->
+    <string name="action_complete_job_header">Job</string>
+    <string name="action_complete_job_summery">Job Summary</string>
+    <string name="action_complete_job_cost">Job Cost</string>
+    <string name="action_complete_submit">Submit</string>
+    <string name="action_complete_cancel">Cancel</string>
+
+    <!--Payment-->
+    <string name="payment_no_jobfare">You dnt have jobfare</string>
+    <string name="jobfare_header_label">JOB FARE</string>
+    <string name="jobfare_jobid_label">Job Id :</string>
+    <string name="paymentfar_requestpayment_label">Request Payment</string>
+    <string name="paymentfar_receivecash_label">Receive Cash</string>
+    <string name="paymentfar_received_done_label">Done</string>
+    <string name="payment_amount_receivecash_label">Please collect the below amount from the user</string>
+    <string name="payment_amount_receivecash_error">User have paid the amount Successfully through discount code</string>
+
+
+    <!--Otp-->
+    <string name="lbel_otp">OTP</string>
+    <string name="lbel_otp_code">OTP CODE</string>
+    <string name="lbel_otp_code_confirm">Confirm</string>
+    <string name="lbel_otp_code_confirm_txt">Please Enter The OTP Sent To The User </string>
+    <string name="lbel_otp_code_enter_alert">Enter the otp</string>
+
+
+    <!--ReviwesPage-->
+    <string name="lbel_reviwes">Rating</string>
+    <string name="skip_reviwes_label">Skip</string>
+    <string name="my_rides_rating_header_comment_textview">Please enter your comment about your user</string>
+    <string name="my_rides_rating_header_sorry_textview">Sorry</string>
+    <string name="my_rides_rating_header_enter_all">Please rate all</string>
+    <string name="my_rides_rating_submit_successfully">Your ratings submitted successfully</string>
+    <string name="my_profile_reviwes">reviwes</string>
+
+
+    <!--ProfilePage-->
+    <string name="profilr_header_label">My Profile</string>
+    <string name="profilr_header_label_reviews">My Profile Reviews</string>
+    <string name="noreviwes">You dont have any review</string>
+    <string name="editupdate">Updated Successfully</string>
+    <string name="edit_profile_tv_label">Edit your profile</string>
+    <string name="rating_comments">Comments</string>
+
+    <!--new tasker profile-->
+    <string name="new_tasker_profile_address">ADDRESS</string>
+    <string name="new_tasker_profile_category">CATEGORY</string>
+    <string name="new_tasker_profile_work_location">WORKING LOCATION</string>
+    <string name="new_tasker_profile_radius">RADIUS</string>
+    <string name="new_tasker_profile_working_experience">WORKING EXPERIENCE</string>
+
+
+    <!--Ratings-->
+    <string name="raterewies">Please rate the plumbar</string>
+    <string name="norewies_found">No Reviwes Found</string>
+    <string name="rateing_btn_label">Rate Now</string>
+    <string name="lbel_notification_selectrating">Select your rating</string>
+
+    <!--BankDetails-->
+    <string name="bank_deatails_account_name">Account Name</string>
+    <string name="bank_account_holdername_label">Account Holder Name</string>
+    <string name="bank_account_holderaddress_label"> Address</string>
+    <string name="bank_account_no_label">Account Number</string>
+    <string name="bank_account_bankname_label">Bank Name</string>
+    <string name="bank_account_bankbranch_label">Branch Name</string>
+    <string name="bank_account_branch_address_label">Branch Address</string>
+    <string name="bank_account_ifsc_code_label">Ifsc Code</string>
+    <string name="bank_account_routinno_label">Routing Number</string>
+    <string name="bank_save_label"> SAVE</string>
+
+    <string name="action_alert_bank_Username">Username can\'t be empty</string>
+    <string name="action_alert_bank_accountno">Accountno can\'t be empty</string>
+    <string name="action_alert_bank_address">Address can\'t be empty</string>
+    <string name="action_alert_bank_name">Bankname can\'t be empty</string>
+    <string name="action_alert_branch_name">Branchname can\'t be empty </string>
+    <string name="action_alert_branch_address">BranchAddress can\'t be empty </string>
+    <string name="action_alert_bank_ifs_code">Ifsc code can\'t be empty</string>
+    <string name="action_alert_bank_routingno">Routingno can\'t be empty</string>
+    <string name="action_alert_bankinfo_invails">Invalid Bank Details</string>
+    <string name="alertsaved_label_title">Saved successfully</string>
+
+    <!--Workflow-->
+    <string name="workflow_header_label">A2zkaj For All</string>
+    <string name="empty_timeline">You dont have any job timeline</string>
+
+
+    <!--EditProfile-->
+    <string name="editprofile_header_label">Edit Profile</string>
+    <string name="editprofile_mobileno_label">Mobile</string>
+    <string name="editprofile_address_label">Address</string>
+    <string name="editprofile_email_label">Email</string>
+    <string name="editprofile_name_label">Name</string>
+    <string name="editprofile_bio_label">Bio</string>
+    <string name="editprofile_updates_label">Edit Profile</string>
+    <string name="editprofile_update_label">Update</string>
+    <string name="editprofile_country_label">code</string>
+    <string name="editprofile_mobilno_label">mobilno</string>
+    <string name="editbiovalidate_country_label">Bio can\'t be empty </string>
+    <string name="editprofile_work_location_label">Work Location</string>
+    <string name="editprofile_radius_label">Radius</string>
+
+    <string name="edit_mobilno_validate_country_label">Mobileno can\'t be empty </string>
+    <string name="edit_country_code_validate_country_label">CountryCode can\'t be empty </string>
+    <string name="edit_address_validate_country_label">Address can\'t be empty </string>
+    <string name="edit_city_validate_country_label">City can\'t be empty </string>
+    <string name="edit_state_validate_country_label">State can\'t be empty </string>
+    <string name="edit_country_validate_country_label">Country can\'t be empty </string>
+    <string name="edit_postal_code_validate_country_label">PostalCode can\'t be empty </string>
+    <string name="editbiovalidate_name_label">Name can\'t be empty </string>
+    <string name="editbiovalidate_worklocation_label">WorkLocation can\'t be empty </string>
+    <string name="editbiovalidate_radius_label">Radius can\'t be empty </string>
+    <string name="edit_profile_success_label">Image uploaded successfully</string>
+    <string name="profile_label_error_mobile">Enter valid phone number</string>
+    <string name="review_not_available">Sorry</string>
+    <string name="location_change">Kindly Change Your Location</string>
+
+    <!--edit available-->
+    <string name="edit_avail_days">Days</string>
+
+    <string name="edit_profile_city">city</string>
+    <string name="edit_profile_state">state</string>
+    <string name="edit_profile_country">country</string>
+    <string name="edit_profile_postalcode">postalcode</string>
+
+    <string name="edit_profile_otplayout_otp_here">Enter your OTP here</string>
+    <string name="edit_profile_otplayout_otp_hint">OTP</string>
+
+    <string name="inflate_transaction_list_jobid">Jobid</string>
+
+    <!--New Leads-->
+    <string name="newleads_notavailable_label">You Do Not Have Any New Leads</string>
+    <string name="missedleads_notavailable_label">You Do Not Have Any Missed Leads</string>
+
+
+    <!-- My Profile Take Photo Dialog -->
+    <string name="takephoto"> Upload Photo </string>
+    <string name="camra">Take photo from camera</string>
+    <string name="existingcamera">Choose an existing photo from gallery</string>
+
+    <!--Earning Statees-->
+    <string name="noearning_states"> No Earning States Available</string>
+
+    <!--Conversation Page-->
+    <string name="no_chat_label">Conversation Not Available</string>
+    <string name="chat_header_label">Chat</string>
+
+    <!--ChangePassword-->
+    <string name="changepwd_header_label">Change Password</string>
+    <string name="action_label_currentpassword">Current Password</string>
+    <string name="action_label_newassword">New Password</string>
+    <string name="action_label_confirmnewpassword">Confirm New Password</string>
+    <string name="action_label_change_password_done">Done</string>
+    <string name="changepassword_currentpwd_label">Current password can\'t be empty</string>
+    <string name="changepassword_newpwd_label">New password can\'t be empty</string>
+    <string name="changepassword_confirmpwd_label">Confirm password can\'t be empty</string>
+    <string name="matc_password">Password does not match</string>
+
+    <string name="customer_notification_replay">Reply</string>
+
+
+    <string name="bepatient">This May Take Few Seconds, Please Do Not Refresh</string>
+    <string name="PaymentRequest">Please Wait…… Your Payment Request Has been Sent</string>
+    <string name="PleaseWait">Please wait....</string>
+    <string name="checkstatus">Check status</string>
+
+    <string name="watting_PaymentRequest">Payment Request</string>
+
+
+    <!--ForgotPassword-->
+    <string name="action_label_forgotpassword_label">Forgot password?</string>
+    <string name="action_label_forgotpassword_header">Forgot password</string>
+    <string name="forgotpassword">Please enter your Phone or Email</string>
+    <string name="enteremail">Enter your Phone or Email</string>
+    <string name="forgotpasswordlink">Send me a password reset link</string>
+
+
+    <string name="label_forgotpwd_text1">If you have forgotten your password,please</string>
+    <string name="label_forgotpwd_text2">enter your email address below and you will </string>
+    <string name="label_forgotpwd_text3">receive an email instructing you on how to reset</string>
+    <string name="label_forgotpwd_text4">your password.</string>
+    <string name="label_forgotpwd_emailhint">Insert your email address</string>
+    <string name="label_forgotpwd_resetpwd">RESET PASSWORD </string>
+
+
+    <!--Chat-->
+    <string name="chat_page_label_message">Send message </string>
+    <string name="action_typing">typing... </string>
+    <string name="empty_chat_list">Not ChatList Yet</string>
+    <string name="header_chat_list">Chats</string>
+    <string name="caht_cannot_send_message_lable">Can\'t send message right now the user is in offline </string>
+    <string name="chat_online">Online</string>
+    <string name="chat_offline">Offline</string>
+
+
+    <!--MultipleLogin-->
+    <string name="action_session_expired_title">Session Expired</string>
+    <string name="action_session_expired_message">Please re-login to renew your session</string>
+
+    <!--Request payment-->
+    <string name="action_loading_wait">Please wait...</string>
+    <string name="profile_lable_logout_title">LOG OUT</string>
+    <string name="profile_lable_logout_message">Are you sure you want to Log out?</string>
+    <string name="profile_lable_logout_yes">YES</string>
+    <string name="profile_lable_logout_no">NO</string>
+
+
+    <!--jobstaus-->
+
+    <string name="jonclosed">Closed</string>
+    <string name="job_arrived">Arrived</string>
+    <string name="job_complerted">Completed</string>
+    <string name="job_pending">Pending</string>
+    <string name="job_started">Started</string>
+    <string name="dialog_registration_success">Success</string>
+    <string name="dialog_registration_cancel">Cancelled</string>
+    <string name="dialog_registration_cancel_message">Your Registration is cancelled</string>
+
+    <string name="dialog_registration_message">Thank you for Registering.
+    A confirmation mail has been sent to your email address.</string>
+    <!-- Track String-->
+    <string name="track_details">Track Your Visit</string>
+
+    <string name="estimate_price_label_search">Enter Place to Search</string>
+    <string name="estimate_price_label_place_notAvailable">No Search Found</string>
+    <string name="estimate_price_label_not_found">No Rate Available</string>
+    <string name="action_processing">Processing</string>
+
+    <string name="aboutus_content">If you are professional and searching to expand your business, A2zkaj for all will helps you to search customers in large volume. Login into the app and start getting the orders around your location. Experts can login and check their transactions, track ratings, payment summary and so on..</string>
+    <!--availability Edit-->
+
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+
+    <!--Tasker Home page-->
+    <string name="availability_title">Availability</string>
+    <string name="availability_title_with_colon">Availability :</string>
+    <string name="availability_message_off">Your availability is off</string>
+    <string name="availability_message_on">Your availability is on</string>
+    <string name="availabe_title">Available</string>
+    <string name="unavailabe_title">Unavailable</string>
+
+
+    <!--Task Comlpeted Alert material Add-->
+
+    <string name="header_confirm">Miscellaneous Details</string>
+    <string name="material_add_note_text">Click On Add Material If Any And Then Click Okay To Proceed</string>
+    <string name="Note">Note :</string>
+    <string name="add_material">Add Material</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_fields_TXT">Add Fields</string>
+    <string name="add_layout_fields_TXT_tool_name">Tool Name</string>
+    <string name="add_layout_fields_TXT_tool_cost">Cost</string>
+
+    <string name="Add">Ok</string>
+    <string name="book">BOOK</string>
+
+    <!--Transaction detail screen-->
+    <string name="activity_transaction_TXT_booking_id">BOOKING ID: </string>
+    <string name="activity_transaction_TXT_taskcategory">Task Category</string>
+    <string name="activity_transaction_TXT_username">User Name</string>
+    <string name="activity_transaction_TXT_useraddress">Task Address</string>
+    <string name="activity_transaction_TXT_totalhours_hint">Total Hours</string>
+    <string name="activity_transaction_TXT_payment_mode">Payment Mode</string>
+    <string name="activity_transaction_TXT_perhour">Per Hour</string>
+    <string name="activity_transaction_TXT_baseprice">Base Price</string>
+    <string name="activity_transaction_TXT_tasktime">Task Time</string>
+    <string name="activity_transaction_TXT_taskamount">Task Amount</string>
+    <string name="activity_transaction_TXT_material_fees">Material fees</string>
+    <string name="activity_transaction_TXT_adminamount">Admin Commission</string>
+    <string name="activity_transaction_TXT_totalamount">Total Amount</string>
+
+    <string name="activity_transaction_TXT_view_task_details">View Task Details</string>
+
+    <!--Live TRacking Page-->
+
+    <string name="tasker_current_address">Current Address :</string>
+    <string name="user_current_address">Destination Address :</string>
+    <string name="tasker_location_based_address">Location Based Address</string>
+    <string name="tasker_reach_your_destination">You will reach your destination</string>
+
+    <!--Job_Detail_page-->
+
+    <string name="sorry">Sorry</string>
+    <string name="live_tracking_alert">You have already reached in your destination address</string>
+
+    <!--category load page-->
+    <string name="quickPinch">Quick Pitch</string>
+    <string name="set_hourlyrate">Set Hourly rate</string>
+    <string name="setMinrate">Min rate </string>
+    <string name="levelofexpLabel">Level of Experience</string>
+    <string name="headerBar_name_category_label">Category</string>
+    <string name="editprofile_edit_label">Add Category</string>
+    <string name="edit_category_text">Edit Category</string>
+    <string name="parentCategory_edit_category_dialog">Parent Category</string>
+    <string name="childCategory_edit_category_dialog">Sub Category</string>
+    <string name="confirm_delete">Confirm Delete</string>
+    <string name="category_added">Category Added Successfully</string>
+    <string name="hourly_rate_alert">Enter hourly rate above minimum rate..</string>
+    <string name="edittext_hourly_rate_validation">Hourly rate must not be empty!</string>
+    <string name="edit_quick_pinch_alert">Quick Pitch must not be empty!</string>
+    <string name="alert_categoryDlt">Are you sure you want to delete this category?</string>
+    <string name="alert_no_category">Sub category not available</string>
+    <string name="hourly_amount">Enter the amount</string>
+
+    <!-- My JObs Page -->
+    <string name="dialog_title">Cancel Reason</string>
+    <string name="alert__otp_empty">Please Enter OTP</string>
+    <string name="alert_otp_wrong">Please Enter Correct OTP</string>
+
+    <string name="my_jobs_Open">Open</string>
+    <string name="my_jobs_Completed">Completed</string>
+    <string name="my_jobs_Cancelled">Cancelled</string>
+
+    <string name="instruction_text">Instruction</string>
+
+    <string name="activity_tasker_profile_view_TXT_availability_title">AVAILABILITY</string>
+
+    <string name="mor">Morning</string>
+    <string name="after">Afternoon</string>
+    <string name="eve">Evening</string>
+
+    <!--MyFirebaseMassagingService-->
+    <string name="Chat_Notification">A2zkajForAll (Chat Notification)</string>
+    <string name="Job_Notification">A2zkajForAll (Job Notification)</string>
+    <string name="Payment_Completed">A2zkajForAll (Payment Completed)</string>
+    <string name="Job_Cancelled_Notification">A2zkajForAll (Job Cancelled Notification)</string>
+    <string name="Please_Accept_the_Pending_task">A2zkajForAll (Please Accept the Pending task:</string>
+    <string name="Your_Job_has_been_Expired">A2zkaj For All(Your Job has been Expired:</string>
+    <string name="Admin_Notification">A2zkajForAll (Admin Notification)</string>
+
+    <string name="meterial_add_new_enter_the_toolname">Enter the Tool name</string>
+    <string name="meterial_add_new_enter_the_toolcost">Enter the Tool cost</string>
+
+    <string name="text1">Our rich &amp; responsive interface will give you the best user experience.</string>
+    <string name="text2">Customers are looking to hire experienced professionals just like you !!</string>
+    <string name="text3">Connect with customers to get hired and earn more money !!!</string>
+    <string name="text4">Carry your ToolKit and help the people around the world !!!</string>
+
+    <string name="myjobs_ongoing_deatils_page_accept">Accept</string>
+    <string name="myjobs_ongoing_deatils_page_start_Off">Start Off</string>
+    <string name="myjobs_ongoing_deatils_page_arrived">Arrived</string>
+    <string name="myjobs_ongoing_deatils_page_start_job">Start job</string>
+    <string name="myjobs_ongoing_deatils_page_reject">Reject</string>
+    <string name="myjobs_ongoing_deatils_page_complete_job">Complete Job</string>
+    <string name="myjobs_ongoing_deatils_page_Payment">Payment</string>
+    <string name="myjobs_ongoing_deatils_page_cancel">Cancel</string>
+    <string name="myjobs_ongoing_deatils_page_cancel_reason">Cancel Reason</string>
+    <string name="myjobs_ongoing_deatils_page_more_info">More Info</string>
+
+    <string name="gcm_intent_manager_title">A2zkaj For All Partner Alert</string>
+    <string name="myjobs_enter_the_from_and_to_date">Please Enter the From and To Date</string>
+
+    <string name="pull_to_refresh">pull to refresh</string>
+
+    <string name="cancel_other_reason_text">Other Reason</string>
+    <string name="cancel_other_editttext_reason">Enter the Other Reason</string>
+    <string name="cancle_other_reason_alert">Reason could not be Empty</string>
+
+    <!--Language Settings page-->
+    <string name="settings_language_text">Language :</string>
+    <string name="action_settings_Caps">Settings</string>
+    <string name="btn_TXT_negative">Cancel</string>
+    <string name="btn_TXT_positive">OK</string>
+    <string name="content">Are you sure want to change the Language?</string>
+    <string name="title">Choose Language</string>
+    <string name="english_text">English</string>
+    <string name="other_text">Other Language</string>
+
+    <string name="statistics_earnings_states_fragment_month_text">Month</string>
+
+</resources>

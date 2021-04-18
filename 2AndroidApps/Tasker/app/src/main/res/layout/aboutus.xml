@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/aboutus_layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/appmain_color">
+
+        <RelativeLayout
+            android:id="@+id/aboutus_header_back_layout"
+            android:layout_width="55dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="26dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:src="@drawable/back_arrow"/>
+        </RelativeLayout>
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/aboutus_header_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:text="@string/aboutus_lable_header_textview"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/aboutus_toolbar_shadow_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/aboutus_layout_header"
+        android:background="@xml/toolbar_shadow" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aboutus_toolbar_shadow_layout"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true">
+            <ProgressBar
+                android:id="@+id/webView_progressbar"
+                style="@style/SmallProgressBarHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:progressDrawable="@drawable/greenprogress"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/aboutus_logo_imageview"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/handyexpertslogo"
+                android:visibility="visible"
+                android:layout_below="@+id/webView_progressbar"/>
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/aboputus_poweredby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutus_logo_imageview"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/aboutus_lable_poweredby_textview"
+                android:textColor="#4e4e4e"
+                android:textSize="13sp"
+                android:visibility="gone"/>
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/aboputus_poweredby_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutus_logo_imageview"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/aboputus_poweredby"
+                android:text="@string/aboutus_lable_company_textview"
+                android:textColor="#4e4e4e"
+                android:textSize="13sp"
+                android:visibility="gone"/>
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/aboutus_versioncode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboputus_poweredby"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="@string/aboutus_lable_version_code_textview"
+                android:textColor="#4e4e4e"
+                android:textSize="13sp"
+                />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutus_versioncode"
+
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:gravity="left"
+                android:text="@string/aboutus_lable_aboutus_description_textview"
+                android:textAlignment="gravity"
+                android:textColor="#4e4e4e"
+                android:textSize="14sp"
+                android:visibility="gone"/>
+
+            <WebView
+                android:id="@+id/WebView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_marginTop="10dp"></WebView>
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/moreinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:gravity="left"
+                android:text=""
+                android:textAlignment="gravity"
+                android:textColor="@color/app_color"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/more_info_baseurl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/moreinfo"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:text=""
+                android:textAlignment="gravity"
+                android:textColor="#CC2793ff"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

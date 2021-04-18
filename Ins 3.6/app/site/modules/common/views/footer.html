@@ -1,0 +1,177 @@
+<div>
+  <script>
+    function opensidenav() {
+      $(".sidenav-wrap").css('left', '0');
+      $("body").addClass("sidenavoverlay");
+      $(".sidenav-wrap").addClass("active");
+      $(".navbar-toggle").addClass("collapsed");
+    }
+
+    function closesidenav() {
+      $(".sidenav-wrap").css('left', '-150%');
+      $("body").removeClass("sidenavoverlay");
+      $(".sidenav-wrap").removeClass("active");
+      $(".navbar-toggle").removeClass("collapsed");
+    }
+
+    $(document).ready(function () {
+
+      $(window).resize(function () {
+        if (($(window).width) > 990) {
+          $(".sidenav-wrap").css('left', '-150%');
+        }
+      });
+
+      $(window).on("scroll", function () {
+        var fromTop = $(document).scrollTop();
+        $('.handy-home-header .navbar').toggleClass("fixed", (fromTop > 100));
+        $('.handy-home-innerheader .handy-home-header .navbar').toggleClass("fixed", (fromTop >= 0));
+      });
+
+    });
+
+
+    $(document).on("click", function (e) {
+
+
+      if ($('.navbar-toggle:not(.collapsed)').is(e.target) || $('.navbar-toggle:not(.collapsed)').has(e.target).length != 0) {
+        opensidenav();
+      } else if (!$('.sidenav-wrap').is(e.target) || !$('.sidenav-wrap').has(e.target)) {
+        closesidenav();
+      }
+
+
+    });
+  </script>
+
+  <section class="handy-home handy-home-innerfooter">
+    <section class="handy-home-footer" style="background: url('uploads/images/homepage/footerbg.png');background-size: 96%;   background-repeat: no-repeat;
+    background-position: 50% 50%;">
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <a ui-sref="landing">
+                <img ui-sref="landing" style="width: auto; min-height: 40px; max-height: 40px;" src="{{rc.getsetting.logo}}" alt="footerlogo">
+              </a>
+              <ul class="social-icons">
+                <li ng-repeat="rc in rc.social" ng-if="rc.name=='Facebook' || rc.name=='Twitter' || rc.name=='Google Plus' || rc.name=='Youtube' ">
+                  <a href={{rc.url}} ng-if="rc.name=='Facebook'" target="_blank"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href={{rc.url}} ng-if="rc.name=='Twitter'" target="_blank"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  <a href={{rc.url}} ng-if="rc.name=='Google Plus'" target="_blank"> <i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                  <a href={{rc.url}} ng-if="rc.name=='Youtube'" target="_blank"> <i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+
+              <!--
+              <div class="handy-lang-section">
+                <select class="lang" ng-init="rc.setDefaultLanguage(rc.DefaultLanguage)" ng-model="rc.DefaultLanguage" ng-change="rc.setDefaultLanguage(rc.DefaultLanguage)">
+                  <option value="">--{{'SELECT' | translate}} --</option>
+                  <option ng-repeat="language in rc.language" ng-selected="rc.DefaultLanguage == language.name" value="{{language.name}}" ng-model="rc.DefaultLanguage">{{language.name}}</option>
+              </select>
+                <select class="currency lang" ng-model="rc.DefaultCurrency[0].name" ng-change="rc.setDefaultCurrency(rc.DefaultCurrency[0].name)">
+                  <option value="">--{{'SELECT' | translate}} --</option>
+                  <option  ng-repeat="currency in rc.Currency" ng-selected="rc.DefaultCurrency[0].name == currency.name" value="{{currency.name}}" ng-model="rc.DefaultCurrency[0].name" >{{currency.code}}</option>
+              </select>
+              </div>
+              -->
+
+              <div class="foot-lang">
+                <div class="lng-slt">
+                  <a href="#" class="slct-bx">{{rc.DefaultLanguage}}</a>
+                  <div class="drpdwn">
+                    <ul class="drpdwn-cnt" ng-init="rc.setDefaultLanguage(rc.DefaultLanguage)">
+                      <li ng-repeat="language in rc.language" ng-click="rc.selectLanguage(language.name)">{{language.name}}</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="curncy-slt">
+                  <a href="#" class="cur-bx" ng-click="">{{rc.DefaultCurrency[0].code}}</a>
+                  <div class="cu-drpdwn">
+                    <ul class="cu-drpdwn-cnt">
+                      <li ng-repeat="currency in rc.Currency" ng-click="rc.selectCurrency(currency.name)">
+                        {{currency.code}}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="app-section">
+                <ul class="app-main">
+                  <li ng-repeat="rc in rc.appstore">
+                    <a href={{rc.url}} ng-if="rc.name=='App Store'" target="_blank"><img src="uploads/images/homepage/app-store.png"> </a>
+                    <a href={{rc.url}} ng-if="rc.name=='Google Play'" target="_blank"><img src="uploads/images/homepage/google-app.png"> </a>
+                  </li>
+                </ul>
+              </div>
+              <ul class="footer_links">
+                <li ng-repeat="data in rc.pages">
+                  <a ng-repeat="pagename in data.categoryname | filter:query as filtered" href="page/{{pagename.slug}}">
+                  {{pagename.name}} 
+                  <span ng-init="total = (filtered.length - 1)"><span ng-if="$index < total" > | </span></span>
+                  </a>
+                </li>
+              </ul>
+
+              <p class="copyright">Copyright &copy; {{rc.copyrightYear | date:'yyyy'}} {{rc.getsetting.site_title}}. ALL right reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+</div>
+
+
+<script>
+    $(document).ready(function () {
+      $(document).on("click", function (e) {
+        if ($(e.target).hasClass("slct-bx")) {
+          $(e.target).toggleClass("active");
+          if ($(e.target).hasClass("active")) {
+            $(".drpdwn").fadeIn();
+            $(e.target).toggleClass("active");
+          } else {
+            $(".drpdwn").fadeOut();
+            $(e.target).toggleClass("active");
+          }
+        } else {
+          $(".drpdwn").fadeOut();
+          $(".slct-bx").removeClass("active");
+        }
+      });
+      $(document).on("click", ".drpdwn li", function (e) {
+        console.log($(e.target), $(e.target).text());
+        $(".slct-bx").text($(e.target).text());
+      })
+    });
+
+</script>
+
+<script>
+  $(document).ready(function () {
+    $(document).on("click", function (e) {
+      if ($(e.target).hasClass("cur-bx")) {
+        $(e.target).toggleClass("active");
+        if ($(e.target).hasClass("active")) {
+          $(".cu-drpdwn").fadeIn();
+          $(e.target).toggleClass("active");
+        } else {
+          $(".cu-drpdwn").fadeOut();
+          $(e.target).toggleClass("active");
+        }
+      } else {
+        $(".cu-drpdwn").fadeOut();
+        $(".cur-bx").removeClass("active");
+      }
+    });
+    $(document).on("click", ".cu-drpdwn li", function (e) {
+      console.log($(e.target), $(e.target).text());
+      $(".cur-bx").text($(e.target).text());
+    })
+  });
+
+</script>

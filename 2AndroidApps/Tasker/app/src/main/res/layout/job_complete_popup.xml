@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/job_complete_label_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/appmain_color">
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="@string/action_complete_job_header"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/job_complete_details_label_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/job_complete_label_layout">
+
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/job_complete_fareTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/action_complete_job_summery"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <core.Widgets.CustomEdittext
+                android:id="@+id/complete_job_fareEt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/job_complete_fareTv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@xml/custom_curv_layout_grey"
+                android:gravity="top|left"
+                android:hint="@string/job_summery"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:typeface="sans">
+
+            </core.Widgets.CustomEdittext>
+
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/job_complete_jobcost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/complete_job_fareEt"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/action_complete_job_cost"
+                android:textColor="#000000"
+                android:imeOptions="actionNext"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+
+            <core.Widgets.CustomEdittext
+                android:id="@+id/complete_job_fare_costEt"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/job_complete_jobcost"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@xml/custom_curv_layout_grey"
+                android:gravity="top|left"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:visibility="gone"
+                android:typeface="sans">
+
+            </core.Widgets.CustomEdittext>
+
+
+            <RelativeLayout
+                android:id="@+id/layout_jobcomplete_btns"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/complete_job_fare_costEt"
+                android:layout_marginTop="20dp">
+
+                <View
+                    android:id="@+id/jobcompletey_popup_view1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentTop="true"
+                    android:background="#cdcdcd" />
+
+                <core.Widgets.CustomButton
+                    android:id="@+id/jobcomplete_popup_cancel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/jobcompletey_popup_view1"
+                    android:layout_toLeftOf="@+id/jobcompletey__popup_view2"
+                    android:background="#ffffff"
+                    android:imeOptions="actionDone"
+                    android:text="@string/ongoing_detail_cancelbtn_label"
+                    android:textColor="#4f4f4f"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/jobcompletey__popup_view2"
+                    android:layout_width="1px"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="#cdcdcd" />
+
+                <core.Widgets.CustomButton
+                    android:id="@+id/jobcomplete_popup_submit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/jobcompletey_popup_view1"
+                    android:layout_toRightOf="@+id/jobcompletey__popup_view2"
+                    android:background="#ffffff"
+                    android:text="@string/action_complete_submit"
+                    android:textColor="#cc0000"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

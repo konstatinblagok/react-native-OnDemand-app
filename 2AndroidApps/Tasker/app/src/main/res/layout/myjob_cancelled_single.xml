@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_details"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layout_top_home_ongoing_detail"
+        android:background="#e5e6eb">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/myjobcancelled_cardView_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            card_view:cardBackgroundColor="#FAFAFA"
+            card_view:cardElevation="3dp">
+
+
+            <RelativeLayout
+                android:id="@+id/myjob_cancelled_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+
+
+                <RelativeLayout
+                    android:id="@+id/myjob_cancelled_single_header_layouts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5dp">
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/myjob_cancelled_orderid_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/jobs_orderid_label"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/myjob_cancelled_orderid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_toRightOf="@+id/myjob_cancelled_orderid_textView"
+                        android:text="asdad"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/myjob_cancelled_bookingtime_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/myjob_cancelled_orderid"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:text="asdas"
+                        android:textColor="#818181"
+                        android:textSize="12sp" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/cancelled_single_calldetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp">
+
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/cancelled_Job_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="5dp"
+                            android:text=""
+                            android:textColor="#000000" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <View
+                    android:id="@+id/myjob_cancelled__view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2px"
+                    android:layout_below="@+id/myjob_cancelled_single_header_layouts"
+                    android:layout_marginTop="4dp"
+                    android:background="#cdcdcd" />
+
+
+                <RelativeLayout
+                    android:id="@+id/myjob_cancelled_single_profile_layouts"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/myjob_cancelled__view">
+
+                    <core.Widgets.RoundedImageView
+                        android:id="@+id/myjob_cancelled_profileimg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/nouserimg" />
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/myjob_cancelled_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="33dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/myjob_cancelled_profileimg"
+                        android:text="fsadc"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/myjob_cancelled_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myjob_cancelled_username"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="33dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/myjob_cancelled_profileimg"
+                        android:text="sfsdf"
+                        android:textColor="#818181"
+                        android:textSize="15sp" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/myjob_cancelled_address_layouts"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myjob_cancelled_category"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_toRightOf="@+id/myjob_cancelled_profileimg">
+
+
+                        <ImageView
+                            android:id="@+id/myjob_cancelled_map_icon"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/location_marker" />
+
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/myjob_cancelled_locationTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@+id/myjob_cancelled_map_icon"
+                            android:text="sfd"
+                            android:textColor="#818181"
+                            android:textSize="12sp" />
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <core.Widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:layout_below="@+id/myjobcancelled_cardView_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

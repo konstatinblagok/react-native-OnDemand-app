@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/layout_top_home"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/appmain_color">
+
+        <RelativeLayout
+            android:id="@+id/home_navigation_layout_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/home_navigation_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_menu" />
+
+
+            <ToggleButton
+                android:id="@+id/online_offline_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/togglebuttonclick"
+                android:textOff="@string/off_state"
+                android:textOn="@string/on_state"
+                 />
+        </RelativeLayout>
+
+        <core.Widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/home_header_label"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+
+        <RelativeLayout
+            android:id="@+id/hometab_header_notification_relativelayout"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/hometab_header_notification"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/bell" />
+
+            <RelativeLayout
+                android:id="@+id/hometab_header_notification_layout"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/hometab_header_notification"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/notification_backgrount"
+                android:visibility="gone">
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/hometab_header_notification_counttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="2"
+                    android:textColor="#cc0000"
+                    android:textSize="13sp"
+                    android:typeface="sans" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_top_home"
+        android:background="@drawable/homepage_background">
+
+
+        <RelativeLayout
+            android:id="@+id/homepage_layout_first"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="85dp">
+
+
+            <ImageView
+                android:id="@+id/home_plumbal_newleads"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="45dp"
+                android:src="@drawable/myorders" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/home_myorders_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/home_plumbal_newleads"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/home_newleads_header_label"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/home_plumbal_myorders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/myjobs" />
+
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/home_myjobs_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/home_plumbal_myorders"
+                android:layout_marginRight="55dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/plumbal_myjobs_label"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/home_layout_second"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homepage_layout_first"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp">
+
+
+            <ImageView
+                android:id="@+id/home_plumbal_statists"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="45dp"
+                android:src="@drawable/mystatistics" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/home_statistes_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/home_plumbal_statists"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/plumbal_statistes_label"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/home_plumbal_support"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/mysupport" />
+
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/home_support_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/home_plumbal_support"
+                android:layout_marginRight="55dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/plumbal_support_label"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    /
+</RelativeLayout>

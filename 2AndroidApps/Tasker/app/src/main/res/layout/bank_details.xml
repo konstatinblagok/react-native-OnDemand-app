@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_top_bankdetails"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/appmain_color">
+
+
+            <RelativeLayout
+                android:id="@+id/layout_back_bankdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true">
+
+                <ImageView
+                    android:id="@+id/bankdetails_back_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/back" />
+
+            </RelativeLayout>
+
+
+            <core.Widgets.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/drawer_list_banking_label"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/layout_top_bankdetails"
+            android:layout_centerHorizontal="true"
+            android:fillViewport="true">
+
+
+            <RelativeLayout
+                android:id="@+id/layoutbank_details"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_main_bank_details"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:visibility="visible">
+
+
+                    <RelativeLayout
+                        android:id="@+id/bank_account_holder_name_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/bank_account_holder_nameTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/bank_deatails_account_name"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/bank_account_holder_nameTv_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toRightOf="@+id/bank_account_holder_nameTv"
+                            android:text="*"
+                            android:textColor="#cc0000"
+                            android:textSize="15sp" />
+
+
+                        <core.Widgets.CustomEdittext
+                            android:id="@+id/account_holder_name_Et"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/bank_account_holder_nameTv"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittext_background_border"
+                            android:ems="10"
+                            android:hint="@string/bank_account_holdername_label"
+                            android:imeOptions="actionNext"
+                            android:inputType="textMultiLine"
+                            android:textColor="#000000"
+                            android:textColorHint="#4f4f4f"
+                            android:textSize="14sp"
+                            android:typeface="sans" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/bank_account_holder_address_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bank_account_holder_name_layout"
+                        android:layout_marginTop="5dp">
+
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/bank_account_holder_addressTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/bank_account_holderaddress_label"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/bank_account_holder_address_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toRightOf="@+id/bank_account_holder_addressTv"
+                            android:text=""
+                            android:textColor="#cc0000"
+                            android:textSize="15sp" />
+
+
+                        <core.Widgets.CustomEdittext
+                            android:id="@+id/account_holder_address_Et"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/bank_account_holder_addressTv"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittext_background_border"
+                            android:ems="10"
+                            android:hint="@string/bank_account_holderaddress_label"
+                            android:imeOptions="actionNext"
+                            android:inputType="textMultiLine"
+                            android:textColor="#000000"
+                            android:textColorHint="#4f4f4f"
+                            android:textSize="14sp"
+                            android:typeface="sans" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bank_account_holder_accountno_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bank_account_holder_address_layout"
+                        android:layout_marginTop="5dp">
+
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/bank_account_holder_accountnoTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/bank_account_no_label"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/bank_account_holder_accountno_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toRightOf="@+id/bank_account_holder_accountnoTv"
+                            android:text="*"
+                            android:textColor="#cc0000"
+                            android:textSize="15sp" />
+
+
+                        <core.Widgets.CustomEdittext
+                            android:id="@+id/account_holder_accountno_Et"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/bank_account_holder_accountnoTv"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittext_background_border"
+                            android:ems="10"
+                            android:hint="@string/bank_account_no_label"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textColorHint="#4f4f4f"
+                            android:textSize="14sp"
+                            android:typeface="sans" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/bank_account_holder_bankname_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bank_account_holder_accountno_layout"
+                        android:layout_marginTop="5dp">
+
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/bank_account_banknameTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/bank_account_bankname_label"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/bank_account_holder_bankname_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toRightOf="@+id/bank_account_banknameTv"
+                            android:text="*"
+                            android:textColor="#cc0000"
+                            android:textSize="15sp" />
+
+
+                        <core.Widgets.CustomEdittext
+                            android:id="@+id/account_holder_bankname_Et"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/bank_account_banknameTv"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittext_background_border"
+                            android:ems="10"
+                            android:hint="@string/bank_account_bankname_label"
+                            android:imeOptions="actionNext"
+                            android:inputType="textMultiLine"
+                            android:textColor="#000000"
+                            android:textColorHint="#4f4f4f"
+                            android:textSize="14sp"
+                            android:typeface="sans" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/bank_account_branch_name_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bank_account_holder_bankname_layout"
+                        android:layout_marginTop="5dp">
+
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/bank_account_branch_nameTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/bank_account_bankbranch_label"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/bank_account_holder_branch_name_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toRightOf="@+id/bank_account_branch_nameTv"
+                            android:text="*"
+                            android:textColor="#cc0000"
+                            android:textSize="15sp" />
+
+
+                        <core.Widgets.CustomEdittext
+                            android:id="@+id/account_branch_name_Et"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/bank_account_branch_nameTv"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittext_background_border"
+                            android:ems="10"
+                            android:hint="@string/bank_account_bankbranch_label"
+                            android:imeOptions="actionNext"
+                            android:inputType="textMultiLine"
+                            android:textColor="#000000"
+                            android:textColorHint="#4f4f4f"
+                            android:textSize="14sp"
+                            android:typeface="sans" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/bank_account_branch_address_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bank_account_branch_name_layout"
+                        android:layout_marginTop="5dp">
+
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/bank_account_branch_addressTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/bank_account_branch_address_label"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/bank_account_branch_address_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toRightOf="@+id/bank_account_branch_addressTv"
+                            android:text=""
+                            android:textColor="#cc0000"
+                            android:textSize="15sp" />
+
+
+                        <core.Widgets.CustomEdittext
+                            android:id="@+id/account_branch_address_Et"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/bank_account_branch_addressTv"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittext_background_border"
+                            android:ems="10"
+                            android:hint="@string/bank_account_branch_address_label"
+                            android:imeOptions="actionNext"
+                            android:inputType="textMultiLine"
+                            android:textColor="#000000"
+                            android:textColorHint="#4f4f4f"
+                            android:textSize="14sp"
+                            android:typeface="sans" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/bank_ifsc_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bank_account_branch_address_layout"
+                        android:layout_marginTop="5dp">
+
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/bank_ifscTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/bank_account_ifsc_code_label"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/bank_ifsc_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toRightOf="@+id/bank_ifscTv"
+                            android:text="*"
+                            android:textColor="#cc0000"
+                            android:textSize="15sp" />
+
+
+                        <core.Widgets.CustomEdittext
+                            android:id="@+id/account_ifsc_Et"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/bank_ifscTv"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittext_background_border"
+                            android:ems="10"
+                            android:hint="@string/bank_account_ifsc_code_label"
+                            android:imeOptions="actionNext"
+                            android:inputType="textMultiLine"
+                            android:textColor="#000000"
+                            android:textColorHint="#4f4f4f"
+                            android:textSize="14sp"
+                            android:typeface="sans" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/bank_routingno_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bank_ifsc_layout"
+                        android:layout_marginTop="5dp">
+
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/bank_routingnoTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/bank_account_routinno_label"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/bank_routingno_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toRightOf="@+id/bank_routingnoTv"
+                            android:text=""
+                            android:textColor="#cc0000"
+                            android:textSize="15sp" />
+
+
+                        <core.Widgets.CustomEdittext
+                            android:id="@+id/account_routingno_Et"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/bank_routingnoTv"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittext_background_border"
+                            android:ems="10"
+                            android:hint="@string/bank_account_routinno_label"
+                            android:imeOptions="actionDone"
+                            android:inputType="textMultiLine"
+                            android:textColor="#000000"
+                            android:textColorHint="#4f4f4f"
+                            android:textSize="14sp"
+                            android:typeface="sans" />
+
+                    </RelativeLayout>
+
+
+                    <core.Widgets.CustomButton
+                        android:id="@+id/bank_ac_save_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/bank_routingno_layout"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="40dp"
+                        android:layout_marginTop="25dp"
+                        android:background="@color/app_color"
+                        android:text="@string/bank_save_label"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/bank_ac_dummyTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bank_ac_save_button"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="12dp"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_bankdetails_noInternet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <include
+                        android:id="@+id/_bankdetails_nointernet_include"
+                        layout="@layout/no_internet_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

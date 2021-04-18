@@ -1,0 +1,52 @@
+<footer data-ng-hide="$state.includes('becometasker.step0')">
+    <section class="social_download">
+        <div class="hirecontainer">
+            <div class="container">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="footer_social">
+                            <a ng-repeat="rc in rc.social" href={{rc.url}} target="_blank"><img src="{{rc.img}}"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="footer_download">
+                            <a href={{rc.url}} ng-repeat="rc in rc.appstore" target="_blank"><img title="{{rc.name}}" src="{{rc.img}}"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <div class="container">
+
+            <div class="col-md-3" ng-repeat="data in rc.pages">
+                <span class="info"> {{data.settings.name}} </span>
+                <span class="info" ng-repeat="pagename in data.categoryname">
+                <a href='page/{{pagename.slug}}'>
+                    {{pagename.name}}
+                 </a>
+               </span>
+               <span class="info" ng-if="data.settings.name == 'COMPANY'"> <a ui-sref='contact_us'> Contact Us</a></span>
+               <span class="info" ng-if="data.settings.name != 'COMPANY'"> <a ui-sref='faq'> Faq  </a></span>
+            </div>
+            <div class="col-md-4 col-box3">
+                <select class="lang" ng-init="rc.setDefaultLanguage(rc.DefaultLanguage)" ng-model="rc.DefaultLanguage" ng-change="rc.setDefaultLanguage(rc.DefaultLanguage)">
+                  <option value="">--{{'SELECT' | translate}} --</option>
+                  <option ng-repeat="language in rc.language" ng-selected="rc.DefaultLanguage == language.name" value="{{language.name}}" ng-model="rc.DefaultLanguage">{{language.name}}</option>
+              </select>
+                <select class="currency lang" ng-model="rc.DefaultCurrency[0].name" ng-change="rc.setDefaultCurrency(rc.DefaultCurrency[0].name)">
+                  <option value="">--{{'SELECT' | translate}} --</option>
+                  <option  ng-repeat="currency in rc.Currency" ng-selected="rc.DefaultCurrency[0].name == currency.name" value="{{currency.name}}" ng-model="rc.DefaultCurrency[0].name" >{{currency.code}}</option>
+              </select>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>{{'Copyright' | translate}} © {{rc.copyrightYear | date:'yyyy'}} {{rc.getsetting.site_title}}. {{'All rights reserved' | translate}}.</p>
+            </div>
+        </div>
+    </div>
+</footer>

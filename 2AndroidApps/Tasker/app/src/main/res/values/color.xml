@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="app_color">#cc1c1c</color>
+    <color name="app_background_color">#E43e40</color>
+    <color name="app_background_btn_color">#ffffff</color>
+    <color name="app_background_facebook_btn_color">#3d4c77</color>
+    <color name="app_background_login_btn_color">#cc1c1c</color>
+    <color name="app_chat_header_background_color">#075e55</color>
+
+    <color name="mainpage_background_color">#fdca95</color>
+
+    <!--App Main Color-->
+    <color name="appmain_color">#f88204</color>
+    <color name="appmain_second_color">#f88204</color>
+    <color name="colorPrimary">#f88204</color>
+    <color name="colorPrimaryDark">#f88204</color>
+    <color name="app_backgroundlayout_color">#fca74c</color>
+
+    <color name="app_cancel_btn_color">#cc0000</color>
+    <color name="app_startjob_btn_color">#097054</color>
+    <color name="app_startoff_btn_color">#6c3a02</color>
+    <color name="app_acceptf_btn_color">#74d600</color>
+    <color name="layout_moreinfo_btn_color">#711da9</color>
+    <color name="layout_arrived_btn_color">#460137</color>
+    <color name="layout_completejob_btn_color">#005502</color>
+    <color name="layout_payment_btn_color">#1b9469</color>
+    <color name="white_color">#FFFFFF</color>
+
+    <color name="app_color_button">#ccF05253</color>
+    <color name="pink_background_color">#E43F3F</color>
+
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#ffffff</color>
+    <color name="colorAccent">#934379</color>
+    <color name="colorAccenttab">#ffffff</color>
+    <color name="app_tab_background">#CDB99C</color>
+
+    resources>
+    <color name="guillotine_background">#ff4546</color>
+    <color name="guillotine_background_dark">#ff4546</color>
+    <color name="selected_item_color">#30d1d5</color>
+
+
+    <color name="colorPrimary_tab">#cdcdcd</color>
+    <color name="colorPrimaryDark_tab">#cdcdcd</color>
+    <color name="textColorPrimary_tab">#FFFFFF</color>
+    <color name="windowBackground_tab">#FFFFFF</color>
+
+
+    <!-- Transparent theme -->
+    <color name="custom_theme_color">#E6ffffff</color>
+    <color name="pushnotification_custom_theme_color">#80000000</color>
+    <color name="pushnotification_custom_payment_theme_color">#F2ffffff</color>
+
+
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white">#ffffff</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
+    <color name="progresscolor">#900c3e</color>
+
+
+    <color name="card_viewgrey">#ECECEC</color>
+    <color name="grey_text">#747474</color>
+
+    <color name="gray">@android:color/darker_gray</color>
+
+    <color name="tab_color">#F5F5F5</color>
+
+</resources>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/avail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_radius_layout">
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/availability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/availability_title"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/mor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/availability"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/availability"
+                android:text="@string/mor"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/after"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/availability"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/mor"
+                android:text="@string/after"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/eve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/availability"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/eve"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/avail"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <core.Widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/sunday_morning"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="70dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/sunday_afternoon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="80dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/sunday_evening"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="90dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear"
+                android:layout_marginTop="20dp">
+
+                <core.Widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/monday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/monday_morning"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="70dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/monday_afternoon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="80dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/monday_evening"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="90dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear1"
+                android:layout_marginTop="20dp">
+
+                <core.Widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/tuesday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/tuesday_morning"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="70dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/tuesday_afternoon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="80dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/tuesday_evening"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="90dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear2"
+                android:layout_marginTop="20dp">
+
+                <core.Widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/wednesday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/wednesday_morning"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="70dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/wednesday_afternoon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="80dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/wednesday_evening"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="90dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear3"
+                android:layout_marginTop="20dp">
+
+                <core.Widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/thursday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/thursday_morning"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="70dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/thursday_afternoon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="80dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/thursday_evening"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="90dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear4"
+                android:layout_marginTop="20dp">
+
+                <core.Widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/friday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/friday_morning"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="70dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/friday_afternoon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="80dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/friday_evening"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="90dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear5"
+                android:layout_marginTop="20dp">
+
+                <core.Widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/sat_morning"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="70dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/saturday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/sat_afternoon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="80dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+
+                <ImageView
+                    android:id="@+id/sat_evening"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="90dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:text="@string/sunday"
+                    android:textColor="#708090" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

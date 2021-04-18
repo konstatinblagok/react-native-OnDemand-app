@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskerListViewController" customModule="Plumbal" customModuleProvider="target">
+            <connections>
+                <outlet property="close_Btn" destination="RIs-cW-LJR" id="v1o-bv-54j"/>
+                <outlet property="swipe_title" destination="6z4-iC-TyJ" id="mRy-Pd-SjE"/>
+                <outlet property="taskerlist_collectionview" destination="AhO-iI-PpE" id="sQs-hy-8vL"/>
+                <outlet property="taskerlist_title" destination="vNL-dL-BQd" id="keA-IL-BGk"/>
+                <outlet property="view" destination="kr7-WV-69P" id="cmH-Q9-Qk4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="kr7-WV-69P">
+            <rect key="frame" x="0.0" y="0.0" width="312" height="441"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDb-eV-awe">
+                    <rect key="frame" x="0.0" y="0.0" width="312" height="441"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WK0-px-xND" customClass="SetColorView" customModule="Plumbal" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="312" height="59"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tasker List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNL-dL-BQd">
+                                    <rect key="frame" x="86" y="19" width="129" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIs-cW-LJR">
+                                    <rect key="frame" x="8" y="10" width="49" height="39"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="croos-circular"/>
+                                    <connections>
+                                        <action selector="close_Action:" destination="-1" eventType="touchUpInside" id="X2L-Pz-m5m"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.62745098040000002" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="59" id="W8O-ef-TnB"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe to get more Taskers " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6z4-iC-TyJ">
+                            <rect key="frame" x="11" y="64" width="284" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="gbZ-fR-RbY"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="gbZ-fR-RbY"/>
+                                </mask>
+                            </variation>
+                        </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AhO-iI-PpE">
+                            <rect key="frame" x="9" y="92" width="293" height="341"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="293" id="2yf-t5-ee7"/>
+                                <constraint firstAttribute="height" constant="288" id="HNl-eb-zOv"/>
+                                <constraint firstAttribute="height" constant="341" id="iGJ-qp-mQi"/>
+                                <constraint firstAttribute="width" constant="300" id="zY4-MZ-Di5"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="35" minimumInteritemSpacing="0.0" id="p8T-HL-cvT">
+                                <size key="itemSize" width="240" height="320"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="24" minY="5" maxX="5" maxY="5"/>
+                            </collectionViewFlowLayout>
+                            <cells/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="HNl-eb-zOv"/>
+                                    <exclude reference="zY4-MZ-Di5"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="ZOm-8U-eOR"/>
+                                <outlet property="delegate" destination="-1" id="5W8-Ji-55h"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="0.96999999999999997" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="WK0-px-xND" secondAttribute="trailing" id="8de-Ca-ZhU"/>
+                        <constraint firstItem="AhO-iI-PpE" firstAttribute="trailing" secondItem="WK0-px-xND" secondAttribute="trailing" constant="-10" id="Ali-bU-Tqd"/>
+                        <constraint firstAttribute="bottom" secondItem="AhO-iI-PpE" secondAttribute="bottom" constant="8" id="HJy-fn-yxf"/>
+                        <constraint firstItem="AhO-iI-PpE" firstAttribute="top" secondItem="6z4-iC-TyJ" secondAttribute="bottom" constant="-12" id="R6h-3h-1i6"/>
+                        <constraint firstItem="6z4-iC-TyJ" firstAttribute="top" secondItem="WK0-px-xND" secondAttribute="bottom" constant="5" id="dhi-i7-1Dk"/>
+                        <constraint firstAttribute="trailing" secondItem="6z4-iC-TyJ" secondAttribute="trailing" constant="17" id="gNO-s3-FDG"/>
+                        <constraint firstItem="6z4-iC-TyJ" firstAttribute="leading" secondItem="KDb-eV-awe" secondAttribute="leading" constant="11" id="hkc-UU-aQc"/>
+                        <constraint firstItem="WK0-px-xND" firstAttribute="top" secondItem="KDb-eV-awe" secondAttribute="top" id="lcd-Gg-yho"/>
+                        <constraint firstItem="WK0-px-xND" firstAttribute="leading" secondItem="KDb-eV-awe" secondAttribute="leading" id="o3P-3a-ayz"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBound" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="KDb-eV-awe" secondAttribute="trailing" id="0JI-4W-SgD"/>
+                <constraint firstItem="KDb-eV-awe" firstAttribute="leading" secondItem="kr7-WV-69P" secondAttribute="leading" id="MwU-5g-ILh"/>
+                <constraint firstItem="KDb-eV-awe" firstAttribute="top" secondItem="kr7-WV-69P" secondAttribute="top" id="TZd-OW-s9j"/>
+                <constraint firstAttribute="bottom" secondItem="KDb-eV-awe" secondAttribute="bottom" id="z4l-S4-nYC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-86" y="106.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="croos-circular" width="32" height="32"/>
+    </resources>
+</document>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="5dp">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/rlParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/category_edit_header"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:background="@color/appmain_color"
+                android:minHeight="?attr/actionBarSize">
+
+                <RelativeLayout
+                    android:id="@+id/layout_editcategory_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true">
+
+                    <ImageView
+                        android:id="@+id/back_editcategory"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/back" />
+                </RelativeLayout>
+
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/category_dialog_labelname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="@string/editprofile_edit_label"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/parentCategory_RelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/category_edit_header">
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/categorydialog_parentcategory_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="4dp"
+                    android:padding="9dp"
+                    android:text="@string/parentCategory_edit_category_dialog"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <!--<Spinner-->
+                <!--android:id="@+id/parentCategory_spinner"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/categorydialog_parentcategory_lbl"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:layout_marginRight="15dp"-->
+                <!--style="@style/SpinnerTheme"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:visibility="visible"/>-->
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/parentCategory_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/categorydialog_parentcategory_lbl"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black_color"
+                    android:visibility="visible" />
+
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/parentCategory_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/categorydialog_parentcategory_lbl"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_spinner"
+                    android:padding="9dp"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/childCategory_RelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/parentCategory_RelativeLayout">
+
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/categorydialog_childcategory_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="9dp"
+                    android:text="@string/childCategory_edit_category_dialog"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <!--<Spinner-->
+                <!--android:id="@+id/childCategory_spinner"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/categorydialog_childcategory_lbl"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:layout_marginRight="15dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--style="@style/SpinnerTheme"-->
+                <!--android:visibility="visible"/>-->
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/childCategory_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/categorydialog_childcategory_lbl"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black_color"
+                    android:visibility="visible" />
+
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/childCategory_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/categorydialog_childcategory_lbl"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_spinner"
+                    android:padding="9dp"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/quickPinch_RelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/childCategory_RelativeLayout">
+
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/categorydialog_quickpinch_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="9dp"
+                    android:text="@string/quickPinch"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <core.Widgets.CustomEdittext
+                    android:id="@+id/edittext_quickPinch"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/categorydialog_quickpinch_lbl"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_background_border"
+                    android:ems="10"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:textColor="#000000"
+                    android:textColorHint="#4f4f4f"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/hourlyRate_RelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/quickPinch_RelativeLayout">
+
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/categorydialog_set_hourlyrate_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="9dp"
+                    android:text="@string/set_hourlyrate"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <RelativeLayout
+                    android:id="@+id/hour_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/categorydialog_set_hourlyrate_lbl"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_background_border">
+
+                    <core.Widgets.CustomEdittext
+                        android:id="@+id/edittext_hourlyrate"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/currency_symbol_value"
+                        android:background="@null"
+                        android:ems="10"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/hourly_amount"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:textColor="#000000"
+                        android:textColorHint="#4f4f4f"
+                        android:textSize="14sp"
+                        android:typeface="sans" />
+
+                    <RelativeLayout
+                        android:id="@+id/currency_symbol_value"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true">
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/currency_symbol"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="$"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/hour_rate_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/hour_layout"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="#A9A9A9"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/levelOfExp_RelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hourlyRate_RelativeLayout">
+
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/levelofexp_label_categoryDialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="9dp"
+                    android:text="@string/levelofexpLabel"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+
+                <!--<Spinner-->
+                <!--android:id="@+id/levelofexp_spinner"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/levelofexp_label_categoryDialog"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:layout_marginRight="15dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--style="@style/SpinnerTheme"-->
+                <!--android:visibility="visible"-->
+                <!--/>-->
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/levelofexp_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/levelofexp_label_categoryDialog"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black_color"
+                    android:visibility="visible" />
+
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/levelOfExp_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/levelofexp_label_categoryDialog"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_spinner"
+                    android:padding="9dp"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <core.Widgets.CustomButton
+                android:id="@+id/btn_negative_categorydata"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:background="#f88204"
+                android:text="@string/cancel"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <core.Widgets.CustomButton
+                android:id="@+id/btn_positive_categorydata"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_toLeftOf="@+id/btn_negative_categorydata"
+                android:background="#5DBCD2"
+                android:text="@string/action_ok"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

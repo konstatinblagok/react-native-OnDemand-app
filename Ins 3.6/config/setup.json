@@ -1,0 +1,48 @@
+{
+    "port": "",
+    "mongodb": {
+        "host": "",
+        "port": "",
+        "database": "",
+        "username": "admin",
+        "password": "admin"
+    },
+    "settings": {
+        "wallet": {
+            "amount": {
+                "minimum": "5",
+                "maximum": "5000",
+                "welcome": "50"
+            },
+            "status": "1"
+        },
+        "site_title": "HandyForAll",
+        "site_url": "http://192.168.0.84:3002/",
+        "email_address": "handyforall@yopmail.com",
+        "admin_commission": "15",
+        "minimum_amount": "300",
+        "service_tax": "0",
+        "billingcycle": "6",
+        "accepttime": "2",
+        "minaccepttime": "1",
+        "bookingIdPrefix": "HFA",
+        "time_zone": "Asia/Calcutta",
+        "date_format": "MM/DD/YYYY",
+        "time_format": "HH:mm",
+        "pay_by_cash": {
+            "status": "1"
+        },
+        "referral": {
+            "status": "1",
+            "amount": {
+                "referral": "5000",
+                "referrer": "35"
+            }
+        },
+        "categorycommission": {
+            "status": "0"
+        },
+        "logo": "uploads/images/others/1502196649827.png",
+        "favicon": "uploads/images/others/1495781259725.ico"
+    }
+}

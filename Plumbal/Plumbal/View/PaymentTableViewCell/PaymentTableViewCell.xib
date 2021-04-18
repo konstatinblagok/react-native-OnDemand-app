@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaymentCell" rowHeight="83" id="KGk-i7-Jjw" customClass="PaymentTableViewCell" customModule="Plumbal" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="119" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="119" height="82"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1xD-ej-WPv">
+                        <rect key="frame" x="37" y="7" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="HNR-8C-QIa"/>
+                            <constraint firstAttribute="width" constant="45" id="TUO-NF-xws"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jl-6K-Nhs" customClass="CustomLabel">
+                        <rect key="frame" x="0.0" y="55" width="119" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="119" id="7fi-pO-bos"/>
+                            <constraint firstAttribute="height" constant="21" id="fZY-OT-Rop"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="6Jl-6K-Nhs" secondAttribute="trailing" id="6qp-Rh-r4e"/>
+                    <constraint firstItem="1xD-ej-WPv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="37" id="8rB-KT-HTW"/>
+                    <constraint firstItem="1xD-ej-WPv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="CLY-UU-35J"/>
+                    <constraint firstAttribute="trailing" secondItem="1xD-ej-WPv" secondAttribute="trailing" constant="37" id="JrD-LY-gwx"/>
+                    <constraint firstAttribute="bottom" secondItem="6Jl-6K-Nhs" secondAttribute="bottom" constant="6" id="Nqv-Za-uer"/>
+                    <constraint firstItem="6Jl-6K-Nhs" firstAttribute="top" secondItem="1xD-ej-WPv" secondAttribute="bottom" constant="3" id="bwl-4F-TZb"/>
+                    <constraint firstItem="6Jl-6K-Nhs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dBZ-dV-XWk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="Payment_Lab" destination="6Jl-6K-Nhs" id="ivd-xL-g3P"/>
+                <outlet property="Wallet_ImageView" destination="1xD-ej-WPv" id="0HS-NH-ktY"/>
+            </connections>
+            <point key="canvasLocation" x="246.5" y="331.5"/>
+        </tableViewCell>
+    </objects>
+</document>

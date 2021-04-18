@@ -1,0 +1,217 @@
+PODS:
+  - AKPickerView (0.2.7)
+  - Alamofire (4.5.0)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - CardIO (5.4.1)
+  - CCMPopup (1.1.0)
+  - CocoaAsyncSocket (7.6.1)
+  - CocoaLumberjack (3.2.1):
+    - CocoaLumberjack/Default (= 3.2.1)
+    - CocoaLumberjack/Extensions (= 3.2.1)
+  - CocoaLumberjack/Default (3.2.1)
+  - CocoaLumberjack/Extensions (3.2.1):
+    - CocoaLumberjack/Default
+  - Crashlytics (3.10.1):
+    - Fabric (~> 1.7.5)
+  - DGElasticPullToRefresh (1.1)
+  - DLHamburgerMenu (1.0.1)
+  - Fabric (1.7.6)
+  - FacebookCore (0.2.0):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.15)
+  - FacebookLogin (0.2.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.2)
+    - FBSDKCoreKit (~> 4.15)
+    - FBSDKLoginKit (~> 4.15)
+  - FacebookShare (0.2.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.2)
+    - FBSDKCoreKit (~> 4.15)
+    - FBSDKShareKit (~> 4.15)
+  - FBSDKCoreKit (4.26.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.26.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.26.0):
+    - FBSDKCoreKit
+  - GoogleMaps (2.6.0):
+    - GoogleMaps/Maps (= 2.6.0)
+  - GoogleMaps/Base (2.6.0)
+  - GoogleMaps/Maps (2.6.0):
+    - GoogleMaps/Base
+  - GradientCircularProgress (3.9.0)
+  - HockeySDK (4.1.6):
+    - HockeySDK/DefaultLib (= 4.1.6)
+  - HockeySDK/DefaultLib (4.1.6)
+  - JSQMessagesViewController (7.3.5):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
+  - JTAlertView (1.1.0)
+  - KissXML (5.2.0)
+  - MNMBottomPullToRefresh (0.0.1)
+  - MPGNotification (1.2.4)
+  - NMRangeSlider (1.2.1)
+  - NVActivityIndicatorView (3.7.0):
+    - NVActivityIndicatorView/Presenter (= 3.7.0)
+  - NVActivityIndicatorView/Presenter (3.7.0)
+  - PayPal-iOS-SDK (2.17.0):
+    - PayPal-iOS-SDK/CardIO (= 2.17.0)
+    - PayPal-iOS-SDK/Core (= 2.17.0)
+  - PayPal-iOS-SDK/CardIO (2.17.0):
+    - CardIO (~> 5.4.1)
+  - PayPal-iOS-SDK/Core (2.17.0)
+  - RKDropdownAlert (0.3.0)
+  - SAWaveToast (0.2.0)
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
+  - Socket.IO-Client-Swift (9.0.1)
+  - Stripe (11.2.0)
+  - SwiftyJSON (3.0.0)
+  - SWRevealViewController (2.3.0)
+  - WDImagePicker (0.2.2)
+  - XMLReader (0.0.2)
+  - XMPPFramework (3.7.0):
+    - CocoaAsyncSocket (~> 7.6.0)
+    - CocoaLumberjack
+    - KissXML (~> 5.2.0)
+
+DEPENDENCIES:
+  - AKPickerView
+  - Alamofire (~> 4.3)
+  - CardIO
+  - CCMPopup
+  - Crashlytics
+  - DGElasticPullToRefresh
+  - DLHamburgerMenu
+  - Fabric
+  - FacebookCore
+  - FacebookLogin
+  - FacebookShare
+  - GoogleMaps
+  - GradientCircularProgress (from `https://github.com/keygx/GradientCircularProgress`)
+  - HockeySDK
+  - JSQMessagesViewController
+  - JSQSystemSoundPlayer
+  - JTAlertView
+  - MNMBottomPullToRefresh
+  - MPGNotification (~> 1.2)
+  - NMRangeSlider
+  - NVActivityIndicatorView
+  - PayPal-iOS-SDK
+  - RKDropdownAlert
+  - SAWaveToast
+  - SDWebImage
+  - Socket.IO-Client-Swift (~> 9.0.0)
+  - Stripe
+  - SwiftyJSON (= 3.0.0)
+  - SWRevealViewController
+  - WDImagePicker (from `https://github.com/justwudi/WDImagePicker.git`, tag `master`)
+  - XMLReader
+  - XMPPFramework
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AKPickerView
+    - Alamofire
+    - Bolts
+    - CardIO
+    - CCMPopup
+    - CocoaAsyncSocket
+    - CocoaLumberjack
+    - Crashlytics
+    - DGElasticPullToRefresh
+    - DLHamburgerMenu
+    - Fabric
+    - FacebookCore
+    - FacebookLogin
+    - FacebookShare
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKShareKit
+    - GoogleMaps
+    - HockeySDK
+    - JSQMessagesViewController
+    - JSQSystemSoundPlayer
+    - JTAlertView
+    - KissXML
+    - MNMBottomPullToRefresh
+    - MPGNotification
+    - NMRangeSlider
+    - NVActivityIndicatorView
+    - PayPal-iOS-SDK
+    - RKDropdownAlert
+    - SAWaveToast
+    - SDWebImage
+    - Socket.IO-Client-Swift
+    - Stripe
+    - SwiftyJSON
+    - SWRevealViewController
+    - XMLReader
+    - XMPPFramework
+
+EXTERNAL SOURCES:
+  GradientCircularProgress:
+    :git: https://github.com/keygx/GradientCircularProgress
+  WDImagePicker:
+    :git: https://github.com/justwudi/WDImagePicker.git
+    :tag: master
+
+CHECKOUT OPTIONS:
+  GradientCircularProgress:
+    :commit: 811ef9c81eb5619c42654d05dc6a7788924ae1cb
+    :git: https://github.com/keygx/GradientCircularProgress
+  WDImagePicker:
+    :git: https://github.com/justwudi/WDImagePicker.git
+    :tag: master
+
+SPEC CHECKSUMS:
+  AKPickerView: 125372e36fcc372216127600a541f14dcdbb7993
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
+  CCMPopup: e41fad5b8a0823c9cddea8eab6d431670c9dabe5
+  CocoaAsyncSocket: 7eadd3f59e1a6c84e2aefc93e9ff7b55156fe174
+  CocoaLumberjack: 2800c03334042fe80589423c8d80e582dcaec482
+  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
+  DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
+  DLHamburgerMenu: e810f73a1a4150527c9b6d6d77776558cc61f55c
+  Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
+  FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
+  FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
+  FacebookShare: 8e9ee8ea06505e6a1d3d719b0cc63e840fb8aaeb
+  FBSDKCoreKit: c8b8582311ec11b145451d8b9717dc6cc2ae5a76
+  FBSDKLoginKit: f3f03b94c21eb834af243c0a881d48641f47ca60
+  FBSDKShareKit: 320712d8293fde6392872c91eb80ef0da5d73cc3
+  GoogleMaps: 42f91c68b7fa2f84d5c86597b18ceb99f5414c7f
+  GradientCircularProgress: 41eda5d2752fdba7b65826e193518ef5aa9df02e
+  HockeySDK: 95db557d54489a570dcdefae0d02f98eecc279a3
+  JSQMessagesViewController: 6587f56aedbcb150a8ba1d968e1ef58b1bc758b7
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  JTAlertView: a7b992030affefbf958887347601e0514f932ec8
+  KissXML: 1c1eeeb6b94e4522cd2f2373e5d0d03c9227738f
+  MNMBottomPullToRefresh: 49fbc5c46c0102204058ed9cc356affe0d0852f4
+  MPGNotification: f0e3924087afa9b3eccd5ce624e03965ae31ae61
+  NMRangeSlider: 317ded652431eb90501c8421d9cddc3930d891e6
+  NVActivityIndicatorView: d3738df7e2e476aca0ba6bf32a8c9fbcfc33d64b
+  PayPal-iOS-SDK: 849321f6214a7187ee4cc684f63fe509df4c4a36
+  RKDropdownAlert: f4b3364c251829ad439dc666836a1f2dad26f4c7
+  SAWaveToast: 64bcf3f0ff1f8147d4c8c18bf51d1594fe22af81
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
+  Socket.IO-Client-Swift: 60b71a684692a312c4aba3ef52f186e0e254e868
+  Stripe: 898f83a95d72180c6eb4acd65b2ae6158fc6a8bd
+  SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
+  SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
+  WDImagePicker: 0014e231d67a63db9a97db74332a8a16723809bc
+  XMLReader: c7e54b707c368e2fa545d8313276b4de13a36ff5
+  XMPPFramework: 6f99ad1afcdb0cdbec7192a8e4c542c3fc3de6f8
+
+PODFILE CHECKSUM: 58ce81c8d0ab41730600a449faba34df14e3c011
+
+COCOAPODS: 1.5.0

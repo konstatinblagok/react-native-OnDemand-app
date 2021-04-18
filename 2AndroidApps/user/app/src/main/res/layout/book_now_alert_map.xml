@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/appointment_page_cardView_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="#f7fbfc"
+        app:cardCornerRadius="6dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="4dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:contentPadding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/booking_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <com.a2zkajuser.core.widgets.CustomTextView
+                    android:id="@+id/header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/header_confirm"
+                    android:textColor="@color/appmain_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/header"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#9b9b99"></View>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/taskername_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_layout"
+                android:layout_marginTop="15dp">
+
+                <com.a2zkajuser.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/taskername"
+                    android:textColor="#9b9b99"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.a2zkajuser.core.widgets.CustomTextView
+                    android:id="@+id/tasker_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19dp"
+                    android:text="@string/taskername"
+                    android:textColor="#9b9b99"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/taskername_layout"
+                android:layout_marginTop="20dp">
+
+                <com.a2zkajuser.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/time"
+                    android:textColor="#9b9b99"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.a2zkajuser.core.widgets.CustomTextView
+                    android:id="@+id/booking_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Time"
+                    android:textColor="#9b9b99"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/date_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/time_layout"
+                android:layout_marginTop="20dp">
+
+                <com.a2zkajuser.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/date"
+                    android:textColor="#9b9b99"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.a2zkajuser.core.widgets.CustomTextView
+                    android:id="@+id/booking_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19dp"
+                    android:text="Date"
+                    android:textColor="#9b9b99"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/instruction_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/chatprofileview">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/booking_page_instruction_editText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="110dp"
+                    android:background="@drawable/edittext_background"
+                    android:gravity="top|left"
+                    android:hint="@string/appointment_label_your_instruction"
+                    android:inputType="textMultiLine"
+                    android:lines="30"
+                    android:minLines="6"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:textCursorDrawable="@xml/edittext_cursor_color_grey"
+                    android:textSize="14sp"
+                    app:met_accentTypeface="fonts/Roboto-Regular.ttf"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="#00000000"
+                    app:met_clearButton="false"
+                    app:met_errorColor="#00000000"
+                    app:met_floatingLabel="none"
+                    app:met_floatingLabelTextColor="#00000000"
+                    app:met_hideUnderline="true"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="#00000000"
+                    app:met_textColor="#9e9e9e"
+                    app:met_textColorHint="#7c7b7b"
+                    app:met_typeface="fonts/Roboto-Regular.ttf"
+                    app:met_underlineColor="#00000000" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/instruction_layout"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/booking_confirm_layout_map">
+
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="1px"
+                    android:layout_height="19dp"
+                    android:layout_below="@+id/view1"
+                    android:layout_centerInParent="true"
+                    android:background="#FFF"></View>
+
+                <RelativeLayout
+                    android:id="@+id/confirm_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/view2">
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/confirm_booking"
+                        android:textColor="#FFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cancel_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/view2">
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/cancel_booking"
+                        android:textColor="#FFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

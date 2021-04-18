@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/sunday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/single_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/days"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.9"
+                android:text="Days"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <com.a2zkaj.Utils.SmoothCheckBox
+                android:id="@+id/check1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:layout_weight="0.5" />
+
+            <com.a2zkaj.Utils.SmoothCheckBox
+                android:id="@+id/check2"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_weight="0.5" />
+
+            <com.a2zkaj.Utils.SmoothCheckBox
+                android:id="@+id/check3"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/update_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/single_layout"
+            android:layout_marginRight="10dp"
+            android:visibility="visible">
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/availability_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/editprofile_update_label"
+                android:textColor="#cc0000"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

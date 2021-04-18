@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <core.Widgets.CustomTextView
+        android:id="@+id/rating_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Behaviour"
+        android:textColor="#010101"
+        android:layout_marginTop="10dp"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <RatingBar
+        android:id="@+id/rating_behaviour_rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rating_desc"
+        style="@style/StarRatingBar"
+        android:layout_marginTop="15dp"
+        android:stepSize="1"/>
+
+</RelativeLayout>

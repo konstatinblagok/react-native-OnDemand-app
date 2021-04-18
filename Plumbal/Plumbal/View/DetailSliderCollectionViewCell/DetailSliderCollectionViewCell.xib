@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Raleway-Bold.ttf">
+            <string>Raleway-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SliderCell" id="gTV-IL-0wX" customClass="DetailSliderCollectionViewCell" customModule="Plumbal" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="96" height="114"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="96" height="114"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PnR-4r-2YA">
+                        <rect key="frame" x="18" y="36" width="92" height="4"/>
+                        <color key="backgroundColor" red="0.1215686275" green="0.69803921570000005" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="4" id="Dz5-L8-sUK"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick_green" translatesAutoresizingMaskIntoConstraints="NO" id="zY9-gj-o77">
+                        <rect key="frame" x="0.0" y="28" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="1Sw-tP-EES"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dsfnds fdsfdsnfdsfndsnfndsmfnmsdf dsfnmdsfnsd sdnmf sdnm fnsmdfnmsd" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnE-0q-E9E">
+                        <rect key="frame" x="-4" y="47" width="89" height="67"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="89" id="plo-gI-ACc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gnE-0q-E9E" secondAttribute="bottom" id="7eg-3x-aOw"/>
+                <constraint firstItem="gnE-0q-E9E" firstAttribute="top" secondItem="PnR-4r-2YA" secondAttribute="bottom" constant="7" id="94i-8X-et0"/>
+                <constraint firstAttribute="bottom" secondItem="zY9-gj-o77" secondAttribute="bottom" constant="66" id="CzH-hE-LYs"/>
+                <constraint firstAttribute="trailing" secondItem="PnR-4r-2YA" secondAttribute="trailing" constant="-14" id="JOd-fr-zYn"/>
+                <constraint firstAttribute="trailing" secondItem="zY9-gj-o77" secondAttribute="trailing" constant="76" id="KAa-Sb-WBd"/>
+                <constraint firstItem="zY9-gj-o77" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="28" id="NmX-cd-lJj"/>
+                <constraint firstAttribute="trailing" secondItem="gnE-0q-E9E" secondAttribute="trailing" constant="11" id="Odo-E6-BVG"/>
+                <constraint firstItem="gnE-0q-E9E" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="-4" id="VaJ-75-Bvx"/>
+                <constraint firstItem="PnR-4r-2YA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="18" id="ZUI-iD-qAB"/>
+                <constraint firstItem="zY9-gj-o77" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZaT-Ku-mRc"/>
+                <constraint firstItem="PnR-4r-2YA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="36" id="gog-e5-Ply"/>
+            </constraints>
+            <size key="customSize" width="142" height="76"/>
+            <connections>
+                <outlet property="Detail_Lab" destination="gnE-0q-E9E" id="gNm-1D-Yrt"/>
+                <outlet property="Horizontal_Line" destination="PnR-4r-2YA" id="gSZ-WR-miZ"/>
+            </connections>
+            <point key="canvasLocation" x="268" y="254"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="tick_green" width="50" height="50"/>
+    </resources>
+</document>

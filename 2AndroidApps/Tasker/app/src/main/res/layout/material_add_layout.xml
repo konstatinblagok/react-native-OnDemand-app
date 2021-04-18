@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="3">
+
+        <core.Widgets.CustomEdittext
+            android:id="@+id/material_add_layout_ET_item1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:background="@drawable/edittext_curve_background_grey"
+            android:hint="@string/add_layout_fields_TXT_tool_name"
+            android:padding="6dp"
+            android:singleLine="true"
+            android:textSize="14sp" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/amount_symbol"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:text="BDT" />
+
+        <core.Widgets.CustomEdittext
+            android:id="@+id/material_add_layout_ET_item2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_curve_background_grey"
+            android:hint="@string/add_layout_fields_TXT_tool_cost"
+            android:inputType="number"
+            android:padding="6dp"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/material_add_layout_BTN_item2"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.32"
+            android:src="@drawable/com_facebook_close" />
+    </LinearLayout>
+
+
+</RelativeLayout>

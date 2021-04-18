@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+
+    <RelativeLayout
+        android:id="@+id/chat_left_main_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/chat_left_arrow_ImageView"
+            android:layout_width="19dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="2dp"
+            android:background="#00000000"
+            android:src="@drawable/balloon_incoming_normal" />
+
+        <RelativeLayout
+            android:id="@+id/chat_left_balloon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="5dp"
+            android:background="@xml/chat_curve_left_layout"
+            android:minHeight="35dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/chat_left_reply_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/chat_left_message_text"
+                    style="@style/chat_text_message_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:autoLink="web"
+                    android:maxWidth="250dp"
+                    android:paddingLeft="13dp"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/chat_left_time_text"
+                style="@style/chat_timings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/chat_left_reply_layout"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/chat_left_reply_layout"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:text="jhnbkjfnbkj"
+                android:textColor="#8e8e8e" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/chat_right_main_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/chat_right_arrow_ImageView"
+            android:layout_width="19dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="2dp"
+            android:background="#00000000"
+            android:src="@drawable/balloon_outgoing_normal" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="13dp"
+            android:background="@xml/chat_curve_right_layout"
+            android:minHeight="35dp">
+
+            <core.Chat.ChatLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/user_reply_status"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_alignBottom="@+id/chat_right_message_text"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_single_tick"
+                    android:visibility="visible" />
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/chat_right_time_text"
+                    style="@style/chat_timings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/chat_right_message_text"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_toLeftOf="@id/user_reply_status"
+                    android:layout_toStartOf="@id/user_reply_status"
+                    android:paddingBottom="5dp"
+                    android:text="bnklgnkgnklgnngbfhjbvn jhfbjfnbjbnjhbfjfnbgbjh kgjnkglnmnh"
+                    android:textColor="#8e8e8e" />
+
+                <core.Widgets.CustomTextView
+                    android:id="@id/chat_right_message_text"
+                    style="@style/chat_text_message_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/chat_right_time_text"
+                    android:autoLink="web"
+                    android:text="" />
+
+            </core.Chat.ChatLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

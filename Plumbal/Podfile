@@ -1,0 +1,42 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Plumbal' do
+
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+pod 'Alamofire', '~> 4.3'
+pod 'Socket.IO-Client-Swift', '~> 9.0.0'
+pod 'GradientCircularProgress', :git => 'https://github.com/keygx/GradientCircularProgress'
+pod 'DGElasticPullToRefresh'
+pod 'WDImagePicker', :git => 'https://github.com/justwudi/WDImagePicker.git', :tag => 'master'
+pod 'SwiftyJSON', '3.0.0'
+pod 'HockeySDK'
+pod 'GoogleMaps'
+pod 'XMPPFramework'
+pod 'XMLReader'
+pod 'NMRangeSlider'
+pod 'NVActivityIndicatorView'
+pod "DLHamburgerMenu"
+pod 'MPGNotification', '~> 1.2'
+pod 'Stripe'
+pod 'PayPal-iOS-SDK'
+pod 'CardIO'
+pod 'JSQMessagesViewController'
+pod 'JSQSystemSoundPlayer'
+pod 'JTAlertView'
+pod 'RKDropdownAlert'
+pod 'CCMPopup'
+pod 'SAWaveToast'
+pod 'MNMBottomPullToRefresh'
+pod 'AKPickerView'
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
+pod 'SDWebImage'
+pod 'SWRevealViewController'
+pod 'Fabric'
+pod 'Crashlytics'
+
+end

@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEEEEE">
+
+        <include
+            android:id="@+id/homepage_headerBar_container_header"
+            layout="@layout/toolbar_layout_without_shadow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/book_my_ride_content_map_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/homepage_headerBar_container_header"
+            android:background="#ffffff"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone">
+
+                <net.bohush.geometricprogressview.GeometricProgressView
+                    android:id="@+id/progressView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    app:gp_color="@android:color/black"
+                    app:gp_duration="800"
+                    app:gp_figure_padding="3dp"
+                    app:gp_number_of_angles="7"
+                    app:gp_type="triangle" />
+            </RelativeLayout>
+
+            <fragment
+                android:id="@+id/book_my_ride_mapview"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false" />
+
+            <ImageButton
+                android:id="@+id/traffic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/book_cardview_current_location_layout"
+                android:background="@drawable/traffic_off"
+                android:paddingTop="5dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/available_service"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_above="@+id/book_my_ride_center_marker_RelativeLayout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/servicenotavailable"
+                android:visibility="gone">
+
+                <com.a2zkajuser.core.widgets.CustomTextView
+                    android:id="@+id/selected_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="@string/map_fragment_no_service_available"
+                    android:textColor="#FFF"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/loding_layout"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/curve_background_black"
+                android:visibility="gone">
+
+                <com.a2zkajuser.mylibrary.ProgressWheel
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:matProg_barWidth="3dp"
+                    wheel:matProg_barColor="#00BFFF"
+                    wheel:matProg_fillRadius="true"
+                    wheel:matProg_progressIndeterminate="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/book_my_ride_center_marker_RelativeLayout"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/book_my_ride_center_view1"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/book_my_ride_center_marker"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/pointer"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/book_my_ride_progress_wheel"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignTop="@+id/book_my_ride_center_marker"
+                    android:layout_centerInParent="true"
+                    android:clickable="false"
+                    android:indeterminate="true"
+                    android:indeterminateDrawable="@xml/circle_progress_animation"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/book_my_ride_center_view1"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_centerInParent="true"
+                android:background="#ffffff"
+                android:visibility="invisible" />
+
+
+            <RelativeLayout
+                android:id="@+id/book_my_ride_loading_layout"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/curve_background_black"
+                android:visibility="gone">
+
+                <com.a2zkajuser.mylibrary.ProgressWheel
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:matProg_barWidth="3dp"
+                    wheel:matProg_barColor="#FCC900"
+                    wheel:matProg_fillRadius="true"
+                    wheel:matProg_progressIndeterminate="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pickupdroplayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/chatprofileview">
+
+                <LinearLayout
+                    android:id="@+id/search_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="17dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/search_icon" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center_horizontal">
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/map_fragment_job_location"
+                        android:textColor="@color/appmain_color"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/map_layout_address_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="19dp"
+                    android:layout_toRightOf="@+id/search_image"
+                    android:gravity="center_vertical">
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:id="@+id/map_address_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/search_address"
+                        android:textColor="#9b9b99"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/favourite_layout"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true">
+
+                    <View
+                        android:id="@+id/fav_view"
+                        android:layout_width="1dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:background="#9b9b99"
+                        android:visibility="gone">
+
+                    </View>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/heart_icon"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/book_cardview_current_location_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pickupdroplayout"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                card_view:cardBackgroundColor="#ffffff"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="5dp">
+
+                <ImageView
+                    android:id="@+id/book_current_location_imageview"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/current_location_icon" />
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/book_my_ride_ridenow_option_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/book_my_ride_loading_layout"
+                android:background="#00000000"
+                android:visibility="visible">
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/main_category_layout"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignParentBottom="true"
+                android:background="#FFF">
+
+                <com.a2zkajuser.utils.HorizontalListView
+                    android:id="@+id/horizontal_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="#FFF">
+
+
+                </com.a2zkajuser.utils.HorizontalListView>
+
+                <LinearLayout
+                    android:id="@+id/booking_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/horizontal_listview"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:background="#696969">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#696969"
+                        android:weightSum="2">
+                        <com.a2zkajuser.core.widgets.CustomButton
+                            android:id="@+id/book_now"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#696969"
+                            android:padding="10dip"
+                            android:text="@string/book_now"
+                            android:textColor="#FFF" />
+                        <View
+                            android:id="@+id/subcategory_view2"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:background="#FFF"
+                            android:visibility="visible"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp">
+                            </View>
+
+
+                        <com.a2zkajuser.core.widgets.CustomButton
+                            android:id="@+id/book_later"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#696969"
+                            android:padding="10dip"
+                            android:text="@string/book_later"
+                            android:textColor="#FFF" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/login_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/horizontal_listview"
+                    android:background="#DCDCDC"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.a2zkajuser.core.widgets.CustomButton
+                        android:id="@+id/login_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/appmain_color"
+                        android:text="@string/map_fragment_login"
+                        android:textColor="#FFF"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/subcategory_layout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_above="@+id/main_category_layout"
+                android:layout_marginBottom="0dp"
+                android:background="#FFF"
+                android:visibility="gone">
+
+
+                <com.a2zkajuser.utils.HorizontalListView
+                    android:id="@+id/horizontal_subcategory_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFF"></com.a2zkajuser.utils.HorizontalListView>
+
+                <View
+                    android:id="@+id/subcategory_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="#DCDCDC"
+                    android:visibility="visible">
+
+                </View>
+
+                <View
+                    android:id="@+id/subcategory_view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/appmain_color"
+                    android:visibility="gone">
+
+                </View>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

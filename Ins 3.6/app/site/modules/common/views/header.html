@@ -1,0 +1,91 @@
+<div>
+  <section class="handy-home {{currentStateHTML.name!='landing'?'handy-home-innerheader':''}}">
+    <div ng-if="currentStateHTML.name!='landing'" class="handyheader-heightfiller">
+    </div>
+    <section class="handy-home-header">
+      <div id="Scrollable" class="sidenav-wrap">
+        <h2 id="close" ui-sref="landing"><img src="{{rc.getsetting.logo}}"></h2>
+        <ul class="" ng-if="username ==''">
+          <li><a href="/login"><i class="fa fa-user" aria-hidden="true"></i> {{'LOGIN' | translate}}</a></li>
+          <li><a href="/signup"><i class="fa fa-pencil" aria-hidden="true"></i> {{'SIGN_UP' | translate}}</a></li>
+        </ul>
+        <ul class="" ng-if="username!=''">
+          <li>
+            <a ui-sref="landing"> <i class="fa fa-home" aria-hidden="true"></i> {{'HOME' | translate}}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="messages"> <i class="fa fa-envelope" aria-hidden="true"></i> {{'MESSAGES' | translate}} ({{chatCount}})
+            </a>
+          </li>
+          <li>
+            <a ui-sref="notifications"> <i class="fa fa-bell" aria-hidden="true"></i> {{'NOTIFICATIONS' | translate}} ({{notifyCount}})
+            </a>
+          </li>
+          <li>
+            <a ui-sref="account"> <i class="fa fa-user" aria-hidden="true"></i> {{'MY_ACCOUNT' | translate}}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="logout"> <i class="fa fa-sign-out" aria-hidden="true"></i> {{'Logout' | translate}}
+            </a>
+          </li>
+
+        </ul>
+      </div>
+      <nav class=" navbar  navbar-inverse {{currentStateHTML.name!='landing'?'fixed':''}}">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" id="open"> <!-- data-toggle="collapse" data-target="#myNavbar" -->
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+            <a class="navbar-brand" ui-sref="landing"><img style="width: auto;max-height: 45px;" src="{{rc.getsetting.light_logo}}" class="mob-lg"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right" ng-if="username ==''">
+              <li><a href="/login"><span class=""><img src="uploads/images/homepage/user-icon.png"></span>{{'LOGIN' | translate}}</a></li>
+              <li><a href="/signup"><span class=""><img src="uploads/images/homepage/pencil-icon.png"></span>{{'SIGN_UP' | translate}} </a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" ng-if="username!=''">
+              <li>
+                <a ui-sref="landing">
+                  <span class="icon entypo home-home"> <i class="fa fa-home" aria-hidden="true"></i></span>
+                  <span class="text">{{'HOME' | translate}}</span>
+                </a>
+              </li>
+              <li>
+                <a ui-sref="messages">
+                  <span class="icon entypo mail"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                  <span class="text">{{'MESSAGES' | translate}} ({{chatCount}}) </span>
+                </a>
+              </li>
+              <li>
+                <a ui-sref="notifications">
+                  <span class="icon entypo mail"><i class="fa fa-bell" aria-hidden="true"></i></span>
+                  <span class="text">{{'NOTIFICATIONS' | translate}} ({{notifyCount}}) </span>
+                </a>
+              </li>
+              <li>
+                <a ui-sref="account">
+                  <span class="icon entypo user"><i class="fa fa-user" aria-hidden="true"></i></span>
+                  <span class="text">{{'MY_ACCOUNT' | translate}}</span>
+                </a>
+              </li>
+              <li>
+                <a ui-sref="logout">
+                  <span class="icon entypo logout"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                  <span class="text">{{'Logout' | translate}}</span>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+    </section>
+  </section>
+</div>

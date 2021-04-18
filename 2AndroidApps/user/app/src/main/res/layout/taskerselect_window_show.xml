@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/available_tasker"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_above="@+id/book_my_ride_center_marker_RelativeLayout"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/tasker_select_back"
+        android:visibility="visible">
+
+        <com.a2zkajuser.core.widgets.CustomTextView
+            android:id="@+id/selected_tasker_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="@string/taskerselect_window_show_Service_not_available"
+            android:textColor="#FFF" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/available_tasker"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/tasker_arrow" />
+
+
+</RelativeLayout>

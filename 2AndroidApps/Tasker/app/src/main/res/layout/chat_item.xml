@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_left_main_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/chat_left_arrow_ImageView"
+        android:layout_width="19dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="3dp"
+        android:background="#00000000"
+        android:src="@drawable/balloon_incoming_normal" />
+
+    <RelativeLayout
+        android:id="@+id/chat_left_balloon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="5dp"
+        android:background="@xml/chat_curve_left_layout"
+        android:minHeight="35dp"
+        android:visibility="visible">
+
+        <core.Chat.ChatLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/username"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/profile_icon"
+                android:text="username"
+                android:visibility="visible" />
+
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/chat_left_time_text"
+                style="@style/chat_timings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:paddingBottom="5dp"
+                android:text="asdsadadasda"
+                android:textColor="@color/app_color" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/chat_left_message_text"
+                style="@style/chat_text_message_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/profile_icon"
+                android:autoLink="web"
+                android:text="asdsad" />
+
+        </core.Chat.ChatLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

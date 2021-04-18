@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loginpage_LAY_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/app_backgroundlayout">
+
+
+        <core.Widgets.CustomEdittext
+            android:id="@+id/loginpage_email_edittext_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="160dp"
+            android:background="@drawable/edittext_fouced_grey"
+            android:hint="@string/loginpage_edittext_lable_email_hint"
+            android:imeOptions="actionNext"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
+
+
+        <core.Widgets.CustomEdittext
+            android:id="@+id/loginpage_password_edittext_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginpage_email_edittext_label"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edittext_fouced_grey"
+            android:hint="@string/loginpage_edittext_lable_password_hint"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
+
+
+        <core.Widgets.CustomButton
+            android:id="@+id/logipage_login_label"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/loginpage_password_edittext_label"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_curve_background_blue"
+            android:text="@string/loginpage_textview_lable"
+            android:textColor="@color/appmain_color"
+            android:textSize="18sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/loginpage_no_account_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logipage_login_label"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp">
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/loginpage_no_account_labelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loginpage_edittext_lable_notaccouvt_Textview"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/loginpage_no_account_labelTv"
+                android:text="@string/loginpage_signup_textview_lable"
+                android:textColor="#6495ED"
+                android:textSize="16sp" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/here"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/sign"
+                android:text="@string/loginpage_here_textview_lable"
+                android:textColor="#FFF"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/loginpage_forgt_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginpage_no_account_label"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp">
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/loginpage_forgt_passwordTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:text="@string/action_label_forgotpassword_label"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp">
+
+            <RelativeLayout
+                android:id="@+id/logipage_backimg_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/back_arrow" />
+            </RelativeLayout>
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/mainpage_logineithemail_textview_lable"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

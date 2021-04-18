@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/background_login_curve">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#A9A9A9"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:padding="5dp">
+
+            <core.Widgets.RoundedImageView
+                android:id="@+id/reviwes_profileimg"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/nouserimg" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/profile_review_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/layout_inflate_review_list_item_RGB"
+                android:layout_toRightOf="@+id/reviwes_profileimg"
+                android:singleLine="true"
+                android:text="Username"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/profile_rating_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_review_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/reviwes_profileimg"
+                android:text="10:33 am - 11:33 am"
+                android:textColor="#A9A9A9"
+                android:textSize="14sp" />
+
+            <RatingBar
+                android:id="@+id/layout_inflate_review_list_item_RGB"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:theme="@style/RatingBar" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/profile_review_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_rating_time"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/reviwes_profileimg"
+                android:text="Commentsxzvxcvxcvxcvxcvxcvxcvcxvcxvcxvxcvxccxvxcvxcvxcvxcvxcvxcvcxvcxvxcvxcvxcvxcvxcvxcvxcvxcvxcvxcvxcvxcvxcv"
+                android:textColor="#000"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

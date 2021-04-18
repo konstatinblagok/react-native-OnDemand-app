@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e5e6eb">
+
+    <RelativeLayout
+        android:id="@+id/layout_top_home_ongoing_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/appmain_color">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_back_ongoingback"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/back_ongoingback"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/back" />
+
+        </RelativeLayout>
+
+
+        <core.Widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/home_my_jobsdetail_header_label"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/myjobs_ongoing_detail_workflow_relativelayout"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/myjobs_ongoing_detail_workflow"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/workflow" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/detail_main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layout_top_home_ongoing_detail"
+        android:visibility="visible">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_details"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@xml/background_hash_curve">
+
+
+            <RelativeLayout
+                android:id="@+id/detail_job_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FAFAFA">
+
+
+                <RelativeLayout
+                    android:id="@+id/detailid_header_layouts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="16dp">
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/details_orderid_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/jobs_orderid_label"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/details_orderid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_toRightOf="@+id/details_orderid_textView"
+                        android:text=""
+                        android:textColor="#5be50b"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/ongoing_detail_jobtype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/detailid_header_layouts"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/ongoing_details_instruction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/ongoing_detail_jobtype"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:maxLength="30"
+                    android:text=""
+                    android:textColor="#838383"
+                    android:textSize="15sp" />
+
+                <RelativeLayout
+                    android:id="@+id/show_moretext_layout"
+                    android:layout_width="90dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/ongoing_details_instruction"
+                    android:visibility="gone">
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/show_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:maxLength="50"
+                        android:text="show more."
+                        android:textColor="@color/appmain_color"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_ongoing_details_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/ongoing_details_instruction"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp">
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/ongoing_details_dateTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/ongoing_detail_date_label"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/ongoing_details_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/ongoing_details_dateTv"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_ongoing_details_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/layout_ongoing_details_date"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp">
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/ongoing_details_timeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/ongoing_detail_time_label"
+                        android:textColor="#ff4546"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/ongoing_details_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@+id/ongoing_details_timeTv"
+                        android:text=" "
+                        android:textColor="#ff4546"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/ongoing_location_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/layout_ongoing_details_time"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="#838383"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/dummy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/ongoing_location_detail"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Locations bnkfjnbzkfj.bnk mbn fkmnbkjfbn"
+                    android:textColor="#838383"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <fragment
+            android:id="@+id/myjob_ongoing_detail_map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_above="@+id/detail_cahts_relativeLayout"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/layout_details"
+            android:clickable="false" />
+
+        <RelativeLayout
+            android:id="@+id/cancel_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_above="@+id/layout_detail_btns"
+            android:background="#FAFAFA"
+            android:visibility="gone">
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/cancel_reson_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:text="Cancel Reason:"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/ongoing_details_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/cancel_reson_title"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="3dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#838383"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/more_reason"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="visible">
+
+                <core.Widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Show more"
+                    android:textColor="#ff4546"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/detail_cahts_relativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_above="@+id/layout_detail_btns"
+            android:background="#934379"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/detail_cahts_linearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+
+                <ImageView
+                    android:id="@+id/detail_chat_img"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/chat"
+                    android:visibility="visible" />
+
+
+                <ImageView
+                    android:id="@+id/detail_phone_img"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/phonecall" />
+
+
+                <ImageView
+                    android:id="@+id/detail_message_img"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/icon_message_jobdetail" />
+
+
+                <ImageView
+                    android:id="@+id/detail_email_img"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/email" />
+
+                <ImageView
+                    android:id="@+id/track_location"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/icon_job_marker"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_detail_btns"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/myjob_ongoing_main_startjob_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:orientation="horizontal">
+
+                <core.Widgets.CustomButton
+                    android:id="@+id/job_detail_btn1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+                <core.Widgets.CustomButton
+                    android:id="@+id/job_detail_btn2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/detail_page_noInternet_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_top_home_ongoing_detail"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true">
+
+
+            <include
+                android:id="@+id/detail_nointernet_include"
+                layout="@layout/no_internet_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+

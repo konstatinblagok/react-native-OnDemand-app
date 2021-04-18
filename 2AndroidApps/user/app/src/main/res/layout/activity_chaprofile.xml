@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#DCDCDC"
+    tools:context="com.a2zkajuser.app.Chaprofile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/otp_layout_header">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.a2zkajuser.core.widgets.CircularImageView
+                android:id="@+id/circleimage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp"
+                android:src="@drawable/username_icon"
+
+                />
+
+            <RelativeLayout
+                android:id="@+id/name_relative"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/circleimage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/chatprofileview">
+
+                <com.a2zkajuser.core.widgets.CustomTextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:text="Name"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/emailrelative"
+                android:layout_width="fill_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/name_relative"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/chatprofileview">
+
+                <com.a2zkajuser.core.widgets.CustomTextView
+                    android:id="@+id/email_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/email"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/email_icon"
+                    android:text="Email"
+                    android:textColor="#9b9b99"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+
+
+                    android:layout_below="@+id/email_text"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#9b9b9b" />
+
+                <ImageView
+                    android:id="@+id/email_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/profile_email" />
+
+                <com.a2zkajuser.core.widgets.CustomTextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/email_icon"
+                    android:text="ksvapplication91@gmail.com"
+                    android:textColor="#000"
+                    android:textSize="14dp" />
+
+                <View
+                    android:id="@+id/add_address_view3"
+                    android:layout_width="1px"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_toLeftOf="@+id/icon_image1"
+                    android:background="#9b9b9b" />
+
+                <ImageView
+                    android:id="@+id/icon_image1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="19dp"
+                    android:src="@drawable/arrowdown" />
+
+                <com.a2zkajuser.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@+id/mobile"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/mobile_icon"
+                    android:text="Mobile"
+                    android:textColor="#9b9b99"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/mobile_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/view1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/profile_phone" />
+
+                <com.a2zkajuser.core.widgets.CustomTextView
+                    android:id="@+id/mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/mobile_icon"
+                    android:text="9890876534"
+                    android:textColor="#000"
+                    android:textSize="14dp" />
+
+                <View
+                    android:id="@+id/add_address_view"
+                    android:layout_width="1px"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/view1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_toLeftOf="@+id/icon_image"
+                    android:background="#9b9b9b" />
+
+                <ImageView
+                    android:id="@+id/icon_image"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/view1"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="19dp"
+                    android:src="@drawable/phonecall" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

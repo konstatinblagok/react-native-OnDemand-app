@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="Cha_Detail_Table" syncable="YES">
+        <attribute name="chatid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userimage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Chat_Table" syncable="YES">
+        <attribute name="jobid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="userid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Provider_Table" representedClassName=".Providertable" syncable="YES">
+        <attribute name="providerid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Cha_Detail_Table" positionX="-1109" positionY="-163" width="128" height="105"/>
+        <element name="Chat_Table" positionX="-731" positionY="-153" width="128" height="105"/>
+        <element name="Provider_Table" positionX="-909" positionY="-117" width="128" height="60"/>
+    </elements>
+</model>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailCell" rowHeight="62" id="KGk-i7-Jjw" customClass="DetailTableViewCell" customModule="Plumbal" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAk-sO-VOC" customClass="BorderLabel" customModule="Plumbal" customModuleProvider="target">
+                        <rect key="frame" x="8" y="0.0" width="1" height="45"/>
+                        <color key="backgroundColor" red="0.08235294118" green="0.61568627450000002" blue="0.91372549020000005" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="Y5o-cI-rKg"/>
+                            <constraint firstAttribute="width" constant="1" id="idp-Nb-iGt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emP-4i-ihi" customClass="BorderLabel" customModule="Plumbal" customModuleProvider="target">
+                        <rect key="frame" x="8" y="45" width="1" height="17"/>
+                        <color key="backgroundColor" red="0.08235294118" green="0.61568627450000002" blue="0.91372549020000005" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="k7N-eW-6el"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEO-nV-LR9" customClass="BorderLabel" customModule="Plumbal" customModuleProvider="target">
+                        <rect key="frame" x="8" y="45" width="20" height="1"/>
+                        <color key="backgroundColor" red="0.08235294118" green="0.61568627450000002" blue="0.91372549020000005" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="D21-SS-J3H"/>
+                            <constraint firstAttribute="width" constant="20" id="VjX-JW-Dy3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOh-f4-SuO" customClass="CustomLabelLightGray" customModule="Plumbal" customModuleProvider="target">
+                        <rect key="frame" x="191" y="33" width="121" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="EBz-iZ-EHM"/>
+                            <constraint firstAttribute="width" constant="121" id="GSL-7c-QjQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EBz-iZ-EHM"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky6-pM-Fjg" customClass="CustomLabel" customModule="Plumbal" customModuleProvider="target">
+                        <rect key="frame" x="36" y="33" width="155" height="21"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jOh-f4-SuO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="25" id="0gx-wT-ahV"/>
+                    <constraint firstItem="jOh-f4-SuO" firstAttribute="firstBaseline" secondItem="ky6-pM-Fjg" secondAttribute="firstBaseline" constant="-2" id="4Ej-qL-kPp"/>
+                    <constraint firstItem="RAk-sO-VOC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="GhK-sA-3YJ"/>
+                    <constraint firstItem="ZEO-nV-LR9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="45" id="IRt-eA-pjc"/>
+                    <constraint firstItem="ky6-pM-Fjg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="Jd2-rc-duP"/>
+                    <constraint firstAttribute="bottom" secondItem="ky6-pM-Fjg" secondAttribute="bottom" constant="7" id="L0d-5I-Mnh"/>
+                    <constraint firstAttribute="trailing" secondItem="ky6-pM-Fjg" secondAttribute="trailing" constant="129" id="PCR-Z1-wIP"/>
+                    <constraint firstItem="jOh-f4-SuO" firstAttribute="baseline" secondItem="ky6-pM-Fjg" secondAttribute="baseline" constant="1" id="Vju-an-ndo"/>
+                    <constraint firstItem="emP-4i-ihi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="XiD-tl-UGQ"/>
+                    <constraint firstAttribute="bottom" secondItem="ky6-pM-Fjg" secondAttribute="bottom" constant="7" id="cCA-OG-T9k"/>
+                    <constraint firstAttribute="bottom" secondItem="emP-4i-ihi" secondAttribute="bottom" constant="-1" id="cRk-8X-2ud"/>
+                    <constraint firstItem="RAk-sO-VOC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="ckI-af-Flx"/>
+                    <constraint firstItem="ky6-pM-Fjg" firstAttribute="leading" secondItem="emP-4i-ihi" secondAttribute="trailing" constant="27" id="d5B-yd-zJx"/>
+                    <constraint firstItem="ky6-pM-Fjg" firstAttribute="leading" secondItem="emP-4i-ihi" secondAttribute="trailing" constant="27" id="dnL-vq-z8Z"/>
+                    <constraint firstItem="ky6-pM-Fjg" firstAttribute="top" secondItem="jOh-f4-SuO" secondAttribute="bottom" constant="-21" id="gBG-3p-dGI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="jOh-f4-SuO" secondAttribute="trailing" id="kmh-zR-ZPZ"/>
+                    <constraint firstItem="ZEO-nV-LR9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="t8M-yS-VLs"/>
+                    <constraint firstItem="emP-4i-ihi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="45" id="uoS-Jh-aLX"/>
+                    <constraint firstItem="ky6-pM-Fjg" firstAttribute="leading" secondItem="emP-4i-ihi" secondAttribute="trailing" constant="27" id="zRo-YZ-OjL"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Jd2-rc-duP"/>
+                        <exclude reference="gBG-3p-dGI"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="Detail_Lab" destination="ky6-pM-Fjg" id="yEA-fs-Yz7"/>
+                <outlet property="Last_VertLine" destination="emP-4i-ihi" id="uuJ-u7-Uf2"/>
+                <outlet property="Time_Lab" destination="jOh-f4-SuO" id="nfB-Sw-CbF"/>
+                <outlet property="borderlable" destination="RAk-sO-VOC" id="ke0-No-wCl"/>
+            </connections>
+            <point key="canvasLocation" x="361" y="289"/>
+        </tableViewCell>
+    </objects>
+</document>

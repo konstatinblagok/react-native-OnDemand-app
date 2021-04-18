@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_details"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#e5e6eb">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/missedleads_cardView_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            card_view:cardBackgroundColor="#FAFAFA"
+            card_view:cardElevation="3dp">
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+
+                <RelativeLayout
+                    android:id="@+id/missedleads_single_header_layouts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5dp">
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/missedleads_orderid_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/jobs_orderid_label"
+                        android:textColor="#000000"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/missedleads_orderid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_toRightOf="@+id/missedleads_orderid_textView"
+                        android:text="fvsd"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/missedleads_jobtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/missedleads_orderid_textView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:text="sfsa"
+                        android:textColor="#818181"
+                        android:textSize="15sp" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/missed_single_calldetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp">
+
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/missed_Job_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="5dp"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <View
+                    android:id="@+id/missedleads_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2px"
+                    android:layout_below="@+id/missedleads_single_header_layouts"
+                    android:layout_marginTop="2dp"
+                    android:background="#cdcdcd" />
+
+
+                <RelativeLayout
+                    android:id="@+id/missedleads_single_profiles_layouts"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/missedleads_view">
+
+                    <core.Widgets.RoundedImageView
+                        android:id="@+id/missedleads_profileimg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/nouserimg" />
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/missedleads_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/missedleads_profileimg"
+                        android:text="szfsd"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/missedleads_job_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/missedleads_username"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/missedleads_profileimg"
+                        android:text="cateee"
+                        android:textColor="#818181"
+                        android:textSize="12sp" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/missedleads_location_layouts"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/missedleads_job_type"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/missedleads_profileimg">
+
+
+                        <ImageView
+                            android:id="@+id/missedleads_map_icon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/location_marker" />
+
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/missedleads_locationTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/missedleads_map_icon"
+                            android:text="sfd"
+                            android:textColor="#818181"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <core.Widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:layout_below="@+id/missedleads_cardView_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

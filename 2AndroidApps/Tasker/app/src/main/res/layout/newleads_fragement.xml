@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/newleads_swipe_refresh_layout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#e5e6eb">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/new_leads_main_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/newleads_swipe_refresh_layout">
+
+
+            <ListView
+                android:id="@+id/newleads_listView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="#e5e6eb"
+                android:divider="#e5e6eb"
+                android:dividerHeight="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp" />
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/no_newleads_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#e1e1e1"
+            android:visibility="visible">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fillViewport="true">
+
+
+                <include
+                    android:id="@+id/newleads_empty_include"
+                    layout="@layout/new_leads_emptty_include_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/new_leads_noInternet_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fillViewport="true">
+
+                <include
+                    android:id="@+id/newleads_nointernet_include"
+                    layout="@layout/no_internet_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+            </ScrollView>
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/newlead_fragment_loadmoreprogress"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#ffffff"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:visibility="visible" />
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout >

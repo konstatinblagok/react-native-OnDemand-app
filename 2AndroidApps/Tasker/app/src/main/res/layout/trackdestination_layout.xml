@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_track_details"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/appmain_color">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_back_ongoingback"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/back_ongoingback"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/back" />
+
+        </RelativeLayout>
+
+
+        <core.Widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/track_details"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/myjobs_ongoing_detail_workflow_relativelayout"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/myjobs_ongoing_detail_workflow"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/workflow" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tasker_current_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_track_details"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFF">
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/tasker_current_address"
+            android:textColor="#DCDCDC"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/tasker_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="15dp"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:text="@string/tasker_location_based_address"
+            android:textColor="@color/grey_text"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/user_Destination_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tasker_current_location"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFF">
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/user_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/user_current_address"
+            android:textColor="#DCDCDC"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/user_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_location"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="15dp"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:text="@string/tasker_location_based_address"
+            android:textColor="@color/grey_text"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/myjob_ongoing_detail_map"
+        android:name="com.google.android.gms.maps.MapFragment"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+
+        android:layout_below="@+id/user_Destination_location"
+        android:clickable="false" />
+
+    <core.Widgets.CircularImageView
+        android:id="@+id/track_ride"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/myjob_ongoing_detail_map"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="-25dp"
+        android:background="@drawable/navigation"
+        android:elevation="3dp" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFF">
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textColor="#FF7F50"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/kilometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/time"
+            android:text=""
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <core.Widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time"
+            android:layout_marginLeft="14dp"
+            android:text="@string/tasker_reach_your_destination"
+            android:textColor="#A9A9A9"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

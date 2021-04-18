@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/appointment_page_calendarview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mcv_arrowColor="@color/caldroid_middle_gray"
+            app:mcv_headerTextAppearance="@color/white"
+            app:mcv_dateTextAppearance="@color/white"
+            app:mcv_weekDayTextAppearance="@color/white"
+            app:mcv_calendarMode="month"
+            app:mcv_selectionColor="@color/appmain_color"
+            android:background="@color/back_color"
+            app:mcv_showOtherDates="all"
+            app:mcv_tileHeight="40dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

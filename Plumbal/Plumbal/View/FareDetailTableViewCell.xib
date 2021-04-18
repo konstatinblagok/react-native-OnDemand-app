@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="fareDetailCellIdentifier" rowHeight="56" id="KGk-i7-Jjw" customClass="FareDetailTableViewCell" customModule="Plumbal" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVk-z7-Iee" customClass="CustomLabel" customModule="Plumbal" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="206" height="39"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="206" id="4Fs-6S-PrF"/>
+                            <constraint firstAttribute="height" constant="39" id="dCx-D8-cBH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zl9-zx-pEE" customClass="CustomLabelGray" customModule="Plumbal" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="301" height="39"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="301" id="Hgf-D4-Jgd"/>
+                            <constraint firstAttribute="height" constant="39" id="Lh6-8o-Ada"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" red="0.2188379684" green="0.32261354349999999" blue="0.06111952465" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Zl9-zx-pEE" firstAttribute="leading" secondItem="SVk-z7-Iee" secondAttribute="trailing" constant="-206" id="BKI-42-I57"/>
+                    <constraint firstItem="SVk-z7-Iee" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="BPF-O7-0TZ"/>
+                    <constraint firstItem="SVk-z7-Iee" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="K6H-nf-WCS"/>
+                    <constraint firstItem="Zl9-zx-pEE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Rr3-NW-GCC"/>
+                    <constraint firstAttribute="bottom" secondItem="SVk-z7-Iee" secondAttribute="bottom" constant="8" id="gk6-oW-lOQ"/>
+                    <constraint firstAttribute="trailing" secondItem="Zl9-zx-pEE" secondAttribute="trailing" constant="11" id="hOA-kJ-JZ3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descLbl" destination="Zl9-zx-pEE" id="WVU-Lk-VdD"/>
+                <outlet property="titleLbl" destination="SVk-z7-Iee" id="3e4-kQ-Xzr"/>
+            </connections>
+            <point key="canvasLocation" x="249" y="244"/>
+        </tableViewCell>
+    </objects>
+</document>

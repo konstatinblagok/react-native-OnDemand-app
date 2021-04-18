@@ -1,0 +1,9 @@
+/* 
+  LocalizedString.strings
+  Plumbal
+
+  Created by Casperon Tech on 23/12/15.
+  Copyright © 2015 Casperon Tech. All rights reserved.
+*/
+"Sign In" = "oturum aç";
+"Register" = "kayıt";

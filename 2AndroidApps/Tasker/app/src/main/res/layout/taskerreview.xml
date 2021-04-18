@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+
+        <core.Widgets.CircularImageView
+            android:id="@+id/reviwes_profileimg"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/profile" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/profile_review_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/reviwes_profileimg"
+            android:text="UerName"
+            android:textColor="@color/appmain_color"
+            android:textSize="16sp" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/profile_review_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_review_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/reviwes_profileimg"
+            android:text="Comments "
+            android:textColor="#8e8e8e"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ratingimage1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@+id/profile_review_description"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/star_ratingbar_full_filled" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_review_description"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="33dp"
+            android:layout_toRightOf="@+id/ratingimage1"
+            android:text="5.0"
+            android:textColor="#8e8e8e"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/dotimage1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/profile_review_description"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/rating"
+            android:src="@drawable/dot" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/profile_rating_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_review_description"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="33dp"
+            android:layout_toRightOf="@+id/dotimage1"
+            android:text="Time"
+            android:textColor="#8e8e8e"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/reviewimage"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/profile_review_description"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp">
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/ratingimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="View Image"
+                android:textColor="#5F9EA0"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_below="@+id/ratingimage1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#9b9b9b"></View>
+
+    </RelativeLayout>
+</RelativeLayout>

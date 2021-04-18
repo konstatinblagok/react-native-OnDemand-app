@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_top_cancelheader"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/appmain_color">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_cancel_back"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/back_ongoingback"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/back" />
+
+        </RelativeLayout>
+
+
+        <core.Widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/home_cancelreason_header_label"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/cancelreason_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_top_cancelheader"
+        android:divider="@null">
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/other_reason_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_below="@+id/cancelreason_listView"
+        android:layout_marginTop="20dp"
+        android:background="#e1e1e1">
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/cancel_reasonTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/cancel_other_reason_text"
+            android:textColor="#8e8e8e"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <core.Widgets.CustomTextView
+        android:id="@+id/emtpy_cancelreason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cancelreason_listView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/cancel_reasonlabel"
+        android:textColor="#000000"
+        android:visibility="gone" />
+
+</RelativeLayout>

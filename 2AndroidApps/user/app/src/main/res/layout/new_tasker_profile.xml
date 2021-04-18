@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_profile_bottom_chatAndCall_layout"
+        android:background="#FFF"
+        android:nestedScrollingEnabled="true">
+
+        <RelativeLayout
+            android:id="@+id/layout_profile_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="#FFF"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/dummy_layout"
+                    android:layout_width="85dp"
+                    android:layout_height="60dp"
+                    android:layout_alignLeft="@id/track_ride"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="30dp"></RelativeLayout>
+
+                <com.a2zkajuser.core.widgets.RoundedImageView
+                    android:id="@+id/reviwes_profileimg"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_alignLeft="@id/track_ride"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/chatprofile" />
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/dummy_layout"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rating_background"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:id="@+id/ratingimage"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/white_staricon" />
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:id="@+id/rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/ratingimage"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#FFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/detail_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_toRightOf="@+id/reviwes_profileimg">
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#000"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/username"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="6dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:id="@+id/mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/email"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="6dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detail_layout"
+                    android:layout_marginTop="15dp"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/radius_background">
+
+                        <com.a2zkajuser.core.widgets.CustomTextView
+                            android:id="@+id/radius_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/activity_tasker_profile_view_radius"
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.a2zkajuser.core.widgets.CustomTextView
+                            android:id="@+id/radius"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/radius_text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:text=""
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/radius_background">
+
+                        <com.a2zkajuser.core.widgets.CustomTextView
+                            android:id="@+id/hour_cost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/activity_tasker_profile_view_hourly_cost"
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.a2zkajuser.core.widgets.CustomTextView
+                            android:id="@+id/h_cost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/hour_cost"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:text=""
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="18dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/radius_background">
+
+                        <com.a2zkajuser.core.widgets.CustomTextView
+                            android:id="@+id/maximum_cost_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/activity_tasker_profile_view_mini_cost"
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.a2zkajuser.core.widgets.CustomTextView
+                            android:id="@+id/maximum_cost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/maximum_cost_text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:text=""
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray"></View>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_layout"
+                android:background="#FFF">
+
+                <RelativeLayout
+                    android:id="@+id/address_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#F5F5F5">
+
+                    <ImageView
+                        android:id="@+id/address_icon1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/location_address" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_down_arrow_expand"
+                        android:visibility="gone" />
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/address_icon1"
+                        android:text="@string/activity_tasker_profile_view_address_caps"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/location_layouts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/address_layout"
+                    android:background="#FFF">
+
+                    <ImageView
+                        android:id="@+id/address_icon"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="26dp"
+                        android:src="@drawable/dot_icon" />
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/address_text"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@+id/address_icon"
+                        android:text=""
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <View
+                        android:id="@+id/addressview"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/address"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#9b9b9b"
+                        android:visibility="gone"></View>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/category_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/location_layouts"
+                    android:background="@color/card_shadow">
+
+                    <ImageView
+                        android:id="@+id/category_icon1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/cate_image" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_down_arrow_expand"
+                        android:visibility="gone" />
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/category_icon1"
+                        android:text="@string/activity_tasker_profile_view_category_caps"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cat_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/category_layout"
+                    android:background="#FFF">
+
+                    <ListView
+                        android:id="@+id/cat_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"></ListView>
+
+                    <ImageView
+                        android:id="@+id/category_icon"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="26dp"
+                        android:src="@drawable/dot_icon"
+                        android:visibility="gone" />
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:id="@+id/category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/category_text"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@+id/category_icon"
+                        android:text="@string/activity_tasker_profile_view_kitchen_cleaning"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/worklocation_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/cat_layout"
+                    android:background="@color/card_shadow">
+
+                    <ImageView
+                        android:id="@+id/location_icon1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/location_address" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_down_arrow_expand"
+                        android:visibility="gone" />
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/location_icon1"
+                        android:text="@string/activity_tasker_profile_view_work_location_caps"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tasker_work_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/worklocation_header"
+                    android:background="#FFF">
+
+                    <ImageView
+                        android:id="@+id/location_icon"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="26dp"
+                        android:src="@drawable/dot_icon" />
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:id="@+id/working_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/location_text"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@+id/location_icon"
+                        android:text=""
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/experience_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tasker_work_location"
+                    android:background="@color/card_shadow"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/experience_icon1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/workexp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_down_arrow_expand"
+                        android:visibility="gone" />
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/experience_icon1"
+                        android:text="@string/activity_tasker_profile_view_working_experience_caps"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/exp_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/experience_layout"
+                    android:background="#FFF"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/experience_icon"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="26dp"
+                        android:src="@drawable/dot_icon" />
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:id="@+id/experience_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/experience_text"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@+id/experience_icon"
+                        android:text="Experience 7 years "
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/availability_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/exp_layout"
+                    android:background="@color/card_shadow"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/availability_icon1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/availability_icons" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_down_arrow_expand"
+                        android:visibility="gone" />
+
+                    <com.a2zkajuser.core.widgets.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/availability_icon1"
+                        android:text="@string/activity_tasker_profile_view_TXT_availability_title"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_below="@+id/availability_text"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/avail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.a2zkajuser.core.widgets.CustomTextView
+                            android:id="@+id/availability"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/activity_tasker_profile_view_availability"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp"
+                            android:textStyle="normal" />
+
+                        <LinearLayout
+                            android:id="@+id/day_session"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/availability"
+                            android:weightSum="4">
+
+                            <com.a2zkajuser.core.widgets.CustomTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.1" />
+
+                            <com.a2zkajuser.core.widgets.CustomTextView
+                                android:id="@+id/mor"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:paddingLeft="10dp"
+                                android:text="@string/mor"
+                                android:textColor="#000"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                            <com.a2zkajuser.core.widgets.CustomTextView
+                                android:id="@+id/after"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:paddingLeft="10dp"
+                                android:text="@string/after"
+                                android:textColor="#000"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                            <com.a2zkajuser.core.widgets.CustomTextView
+                                android:id="@+id/eve"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:paddingLeft="10dp"
+                                android:text="@string/eve"
+                                android:textColor="#000"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/day_session"
+                            android:weightSum="4">
+
+                            <com.a2zkajuser.core.widgets.CustomTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.1" />
+
+                            <com.a2zkajuser.core.widgets.CustomTextView
+                                android:id="@+id/mor_time"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:paddingLeft="10dp"
+                                android:text="(8Am-12Pm)"
+                                android:textColor="#8e8e8e"
+                                android:textSize="9sp" />
+
+                            <com.a2zkajuser.core.widgets.CustomTextView
+                                android:id="@+id/after_time"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:paddingLeft="10dp"
+                                android:text="(12Pm-4Pm)"
+                                android:textColor="#8e8e8e"
+                                android:textSize="9sp" />
+
+                            <com.a2zkajuser.core.widgets.CustomTextView
+                                android:id="@+id/eve_time"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:paddingLeft="10dp"
+                                android:text="(4Pm-8Pm)"
+                                android:textColor="#8e8e8e"
+                                android:textSize="9sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_below="@+id/avail">
+
+                        <ListView
+                            android:id="@+id/list"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:divider="#FFF"
+                            android:focusable="false"></ListView>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_profile_noInternet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:fillViewport="true">
+
+                    <include
+                        android:id="@+id/profilereviwes_nointernet_include"
+                        layout="@layout/no_internet_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                </ScrollView>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/view_profile_bottom_chatAndCall_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/view_profile_chat_layout"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="#000"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/view_profile_chat_icon"
+                    android:visibility="gone" />
+
+                <com.a2zkajuser.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/myJobs_label_chat"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/view_profile_call_layout"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/appmain_color"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/tickicon"
+                    android:visibility="gone" />
+
+                <com.a2zkajuser.core.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/confirmbook_caps"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

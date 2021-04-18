@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/tool_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="3">
+
+        <core.Widgets.CustomEdittext
+            android:id="@+id/material_add_layout_ET_item1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:background="@drawable/edittext_curve_background_grey"
+            android:cursorVisible="true"
+            android:hint="@string/sorting_layout_TXT_lable_name"
+            android:padding="6dp"
+            android:singleLine="true"
+            android:textSize="12sp" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/amount_symbol"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:text="$" />
+
+        <core.Widgets.CustomEdittext
+            android:id="@+id/material_add_layout_ET_item2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_curve_background_grey"
+            android:cursorVisible="true"
+            android:hint="@string/add_layout_fields_TXT_tool_cost"
+            android:inputType="numberDecimal"
+            android:padding="6dp"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/material_add_layout_BTN_item2"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.32"
+            android:src="@drawable/com_facebook_close" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tool_layout"
+        android:layout_marginTop="10dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/add_fields_layout"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/view"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/material_add_layout"
+            android:visibility="visible">
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/add_fields_TXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/add_fields_TXT"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cancel_layout"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/material_cancel_layout"
+            android:visibility="gone">
+
+            <core.Widgets.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/cancel"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/add_one_layout"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/cancel_layout"
+            android:background="@drawable/material_add_layout"
+            android:visibility="gone">
+
+            <core.Widgets.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/Add"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

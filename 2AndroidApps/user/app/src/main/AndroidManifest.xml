@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.a2zkajuser">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- Push Notification Permission -->
+    <uses-permission android:name="com.cabily.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- Camera Permission -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- MAP Permission -->
+    <permission
+        android:name="com.a2zkajuser.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.casperon.plumbal.permission.MAPS_RECEIVE" />
+
+    <application
+        android:name="com.a2zkajuser.core.volley.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/handylogo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.a2zkajuser.app.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Push Notification Permission -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <receiver
+            android:name="com.a2zkajuser.utils.RestartService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="restartApps" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.ACTION_EXTERNAL_APPLICATIONS_AVAILABLE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- <receiver -->
+        <!-- android:name=".GcmBroadcastReceiver" -->
+        <!-- android:permission="com.google.android.c2dm.permission.SEND"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.android.c2dm.intent.RECEIVE" /> -->
+        <!-- <action android:name="com.google.android.c2dm.intent.REGISTRATION" /> -->
+        <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+        <!-- <action android:name="android.intent.action.ACTION_EXTERNAL_APPLICATIONS_AVAILABLE" /> -->
+
+
+        <!-- <category android:name="com.maidac" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+
+        <!-- Firebase Notifications -->
+        <service
+            android:name="com.a2zkajuser.FCM.MyFirebaseMessagingService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.a2zkajuser.FCM.MyFirebaseInstanceIDService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- ./Firebase Notifications -->
+
+        <service
+            android:name="com.a2zkajuser.core.pushnotification.GCMNotificationIntentService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.a2zkajuser.utils.AndroidServiceStartOnBoot"
+            android:enabled="true"
+            android:exported="true" />
+
+        <!-- Identify App Killed or not Service Permission -->
+        <service
+            android:name="com.a2zkajuser.utils.IdentifyAppKilled"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.paypal.android.sdk.payments.PayPalService"
+            android:exported="false" />
+
+        <!-- MAP Permission -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCgwBM4YLj1gCHpRw2e29tN8QaXRJApU1Y" />
+
+        <activity android:name="net.hockeyapp.android.UpdateActivity" />
+        <activity
+            android:name="com.a2zkajuser.app.SignInAndSignUp"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.LogInPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.NavigationDrawer"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.RegisterPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.a2zkajuser.app.OtpPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.LocationSearch"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.CitySelection"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.AboutUs"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.EmergencyContact"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.InviteAndEarn"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.WalletMoney"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.GetMessageChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.PartnerProfilePage"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.MaidacMoneyWebView"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.MaidacMoneyTransaction"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.CategoriesDetailPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.AppointmentPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.AddAddressPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.AppointmentConfirmationPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.MyJobs"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.ProvidersList"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.PushNotificationAlert"
+            android:screenOrientation="portrait"
+            android:theme="@style/PushNotification_NoActionBar_Payment_Transparent_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.CancelJob"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.UserProfilePage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.ProfileOtpPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.ChangePassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.MyJobDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.ProvidersFilter"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.ViewProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.PaymentPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.PaymentWebView"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.RatingPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.ChatPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.a2zkajuser.app.ChatListPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.ForgotPassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.ForgotPasswordOtp"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.ResetPassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme" />
+        <activity
+            android:name="com.a2zkajuser.app.FareSummary"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.PaymentNew"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.Card_list_Details"
+            android:label="@string/title_activity_card_list__details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.paypal.android.sdk.payments.PaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.paypal.android.sdk.payments.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.paypal.android.sdk.payments.PaymentMethodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.a2zkajuser.app.Paypalwebview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.a2zkajuser.app.Trackyourride"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name="com.a2zkajuser.app.FBRegisterpage" />
+        <activity android:name="com.a2zkajuser.app.Facebookotppage" />
+        <activity
+            android:name="com.a2zkajuser.app.NewAppointmentpage"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.a2zkajuser.app.Reviewimageviewclass"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.a2zkajuser.app.Profilpictureview" />
+        <activity
+            android:name="com.a2zkajuser.fragment.Viewprofilefragment"
+            android:theme="@style/NoActionBar_Theme" />
+        <activity
+            android:name="com.a2zkajuser.fragment.TaskerProfileView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.a2zkajuser.fragment.TaskerReviewclass"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.a2zkajuser.app.Maptaskerslist"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.a2zkajuser.app.TransactionMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.a2zkajuser.app.TransactionDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.a2zkajuser.app.ReviewMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.a2zkajuser.app.NotificationMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.a2zkajuser.fragment.Fragment_Map_Home_Page" />
+        <activity
+            android:name="com.a2zkajuser.app.Map_Location_Search"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.TransactionTabActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.fragment.MyTaskTransaction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.a2zkajuser.fragment.MyWalletTransaction"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.a2zkajuser.app.MaidacPaypalMoneyWebView"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.a2zkajuser.core.socket.ChatMessageService" />
+        <service android:name="com.a2zkajuser.utils.SocketCheckService" />
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.a2zkajuser.app.Terms_Conditions"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.a2zkajuser.app.MainPage" />
+        <activity android:name="com.a2zkajuser.app.SettingsPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_Theme"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+    </application>
+
+</manifest>

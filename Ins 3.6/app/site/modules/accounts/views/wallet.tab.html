@@ -1,0 +1,10 @@
+<div ng-init="ACC.getWalleDetailsTemp()" role="tabpanel" class="tab-pane" id="Transactions" read-only="true">
+  <uib-tabset class="tabdetails" active="active">
+    <uib-tab index="0" ng-click="ACC.currentPage= 1; ACC.getWalleDetailsTemp(1)" heading="{{'WALLET_RECHARGE' | translate}}">
+      <ng-include src="'app/site/modules/accounts/views/wallet.sub.tab.html'"></ng-include>
+    </uib-tab>
+    <uib-tab index="1" ng-click="ACC.currentPage= 1; ACC.getUserWalletTransaction(1)" heading="{{'WALLET_TRANSACTION' | translate}}">
+      <ng-include src="'app/site/modules/accounts/views/wallet.user.sub.tab.html'"></ng-include>
+    </uib-tab>
+  </uib-tabset>
+</div>

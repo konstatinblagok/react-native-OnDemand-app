@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_nocredits"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="#155b75">
+
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/no_jobs_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/jobs_ongoing_jobs_notavailable_label"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/refresh_img"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_below="@+id/layout_nocredits"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/pulltorefreshimg" />
+
+
+    <core.Widgets.CustomTextView
+        android:id="@+id/myjob_no_info_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/refresh_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/jobs_notavailable_info_label"
+        android:textColor="#818181"
+        android:textSize="15sp"
+        android:visibility="gone"/>
+
+
+    <core.Widgets.CustomTextView
+        android:id="@+id/tip_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myjob_no_info_textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:gravity="center"
+        android:text="@string/jobs_notavailable_tip_header_label"
+        android:visibility="gone"
+        android:textColor="#818181"
+        android:textSize="18sp" />
+
+
+    <core.Widgets.CustomTextView
+        android:id="@+id/tip_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tip_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/jobs_notavailable_tipdetail_label"
+        android:textColor="#818181"
+        android:textSize="15sp"
+        android:visibility="gone"/>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_go_profile_myjob_ongoing"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#fac400"
+        android:visibility="gone">
+
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/no_go_profileTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/jobs_notavailable_gotoprofile_label"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
